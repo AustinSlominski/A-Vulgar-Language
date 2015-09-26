@@ -1,0 +1,298 @@
+b {/b/}
+bb {/b/}
+
+d {/d/}
+dd {/d/}
+ed {/d/}
+
+f {/f/}
+ff {/f/}
+ph {/f/}
+gh {/f/}
+lf {/f/}
+ft {/f/}
+
+g {/g/}
+gg {/g/}
+gh {/g/}
+gu {/g/}
+gue {/g/}
+
+h {/h/}
+wh {/h/}
+
+j {/j/}
+ge {/j/}
+g {/j/}
+dge {/j/}
+di {/j/}
+gg {/j/}
+
+k {k}
+c {k}
+ch {k}
+cc {k}
+lk {k}
+qu {k}
+q(u) {k}
+ck {k}
+x {k}
+
+l {/l/}
+ll {/l/}
+
+m {/m/}
+mm {/m/}
+mb {/m/}
+mn {/m/}
+lm {/m/}
+
+n {/n/}
+nn {/n/}
+kn {/n/}
+gn {/n/}
+pn {/n/}
+
+p {/p/}
+pp {/p/}
+
+r {/r/}
+rr {/r/}
+wr {/r/}
+rh {/r/}
+
+s {/s/}
+ss {/s/}
+c {/s/}
+sc {/s/}
+ps {/s/}
+st {/s/}
+ce {/s/}
+se {/s/}
+
+t {/t/}
+tt {/t/}
+th {/t/}
+ed {/t/}
+
+v {/v/}
+f {/v/}
+ph {/v/}
+ve {/v/}
+
+w {/w/}
+wh {/w/}
+u {/w/}
+o {/w/}
+
+y {/y/}
+i {/y/}
+j {/y/}
+
+z {/z/}
+zz {/z/}
+s {/z/}
+ss {/z/}
+x {/z/}
+ze {/z/}
+se {/z/}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a {/a/} 
+ai {/a/} 
+au {/a/} 
+
+a {/ā/}
+ai {/ā/}
+eigh {/ā/}
+aigh {/ā/}
+ay {/ā/}
+er {/ā/}
+et {/ā/}
+ei {/ā/}
+au {/ā/}
+a_e {/ā/}
+ea {/ā/}
+ey{/ā/}
+
+e {/e/} 
+ea {/e/} 
+u {/e/} 
+ie {/e/} 
+ai {/e/} 
+a {/e/} 
+eo {/e/} 
+ei {/e/} 
+ae {/e/} 
+ay {/e/} 
+ 
+e {/ē/}
+ee {/ē/}
+ea {/ē/}
+y {/ē/}
+ey {/ē/}
+oe {/ē/}
+ie {/ē/}
+i {/ē/}
+ei {/ē/}
+eo {/ē/}
+ay {/ē/}
+ 
+i {/i/}
+e {/i/}
+o {/i/}
+u {/i/}
+ui {/i/}
+y {/i/}
+ie {/i/}
+
+i {/ī/}
+y {/ī/}
+igh {/ī/}
+ie {/ī/}
+uy {/ī/}
+ye {/ī/}
+ai {/ī/}
+is {/ī/}
+eigh {/ī/}
+i_e {/ī/}
+
+o {/o/} 
+a {/o/} 
+ho {/o/} 
+au {/o/} 
+aw {/o/} 
+ough {/o/} 
+ 
+o {/ō/}
+oa {/ō/}
+o_e {/ō/}
+oe {/ō/}
+ow {/ō/}
+ough {/ō/}
+eau {/ō/}
+oo {/ō/}
+ew {/ō/}
+ 
+o {/oo/} 
+oo {/oo/}
+u {/oo/}
+ou {/oo/}
+
+u {/u/} 
+o {/u/} 
+oo {/u/} 
+ou {/u/} 
+
+o {/ū/}  
+oo {/ū/} 
+ew {/ū/} 
+ue {/ū/} 
+u_e {/ū/} 
+oe {/ū/} 
+ough {/ū/} 
+ui {/ū/} 
+oew {/ū/} 
+ou {/ū/} 
+
+u {/y//ü/} 
+you {/y//ü/} 
+ew {/y//ü/} 
+iew {/y//ü/} 
+yu {/y//ü/} 
+ul {/y//ü/} 
+eue {/y//ü/} 
+eau {/y//ü/} 
+ieu {/y//ü/} 
+eu {/y//ü/} 
+
+oi {/oi/} 
+oy {/oi/} 
+uoy {/oi/} 
+
+ow {/ow/} 
+ou {/ow/} 
+ough {/ow/} 
+
+a {/ə/} 
+er {/ə/} 
+i {/ə/} 
+ar {/ə/} 
+our {/ə/} 
+or {/ə/} 
+e {/ə/} 
+ur {/ə/} 
+re {/ə/} 
+eur {/ə/} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+air {/ã/} 
+are {/ã/} 
+ear {/ã/} 
+ere {/ã/} 
+eir {/ã/} 
+ayer {/ã/} 
+ 
+a {/ä/}
+ar {/ä/}
+au {/ä/}
+er {/ä/}
+ear {/ä/}
+ 
+ir {/û/}
+er {/û/}
+ur {/û/}
+ear {/û/}
+or {/û/}
+our {/û/}
+yr {/û/}
+ 
+aw {/ô/}
+a {/ô/}
+or {/ô/}
+oor {/ô/}
+ore {/ô/}
+oar {/ô/}
+our {/ô/}
+augh {/ô/}
+ar {/ô/}
+ough {/ô/}
+au {/ô/}
+
+ear {/ēə/} 
+eer {/ēə/} 
+ere {/ēə/} 
+ier {/ēə/} 
+ 
+ure {/üə/}
+our {/üə/}
