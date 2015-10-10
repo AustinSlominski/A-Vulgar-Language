@@ -91,7 +91,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 34.0, 56.0, 841.0, 706.0 ],
+						"rect" : [ 179.0, 116.0, 676.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -118,15 +118,70 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-56",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 73.0, 415.0, 34.0, 22.0 ],
+									"style" : "",
+									"text" : "print"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-55",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 234.0, 316.0, 187.0, 22.0 ],
+									"style" : "",
+									"text" : "setprop phonemes ph o oe, bang"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-53",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 73.0, 316.0, 150.0, 22.0 ],
+									"style" : "",
+									"text" : "setprop word phone, bang"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-40",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 73.0, 368.0, 105.0, 22.0 ],
+									"saved_object_attributes" : 									{
+										"filename" : "tophoneme.js",
+										"parameter_enable" : 0
+									}
+,
+									"style" : "",
+									"text" : "js 2 tophoneme.js"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-39",
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 30.0, 431.0, 50.0, 22.0 ],
+									"patching_rect" : [ 508.0, 468.0, 50.0, 22.0 ],
 									"style" : "",
 									"text" : "4 101"
 								}
@@ -139,7 +194,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
-									"patching_rect" : [ 187.0, 364.0, 30.0, 22.0 ],
+									"patching_rect" : [ 665.0, 401.0, 30.0, 22.0 ],
 									"style" : "",
 									"text" : "t l b"
 								}
@@ -152,7 +207,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "list" ],
-									"patching_rect" : [ 30.0, 335.0, 58.0, 22.0 ],
+									"patching_rect" : [ 508.0, 372.0, 58.0, 22.0 ],
 									"style" : "",
 									"text" : "listfunnel"
 								}
@@ -165,7 +220,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "list" ],
-									"patching_rect" : [ 248.0, 331.0, 58.0, 22.0 ],
+									"patching_rect" : [ 726.0, 368.0, 58.0, 22.0 ],
 									"style" : "",
 									"text" : "listfunnel"
 								}
@@ -178,7 +233,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 358.0, 255.0, 54.0, 22.0 ],
+									"patching_rect" : [ 836.0, 292.0, 54.0, 22.0 ],
 									"style" : "",
 									"text" : "104 101"
 								}
@@ -191,7 +246,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 295.0, 255.0, 53.0, 22.0 ],
+									"patching_rect" : [ 773.0, 292.0, 53.0, 22.0 ],
 									"style" : "",
 									"text" : "112 104"
 								}
@@ -204,7 +259,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 30.0, 551.0, 40.0, 22.0 ],
+									"patching_rect" : [ 508.0, 588.0, 40.0, 22.0 ],
 									"style" : "",
 									"text" : "itoa"
 								}
@@ -217,7 +272,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 115.0, 551.0, 24.0, 24.0 ],
+									"patching_rect" : [ 593.0, 588.0, 24.0, 24.0 ],
 									"style" : ""
 								}
 
@@ -228,7 +283,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 30.0, 593.0, 34.0, 22.0 ],
+									"patching_rect" : [ 508.0, 630.0, 34.0, 22.0 ],
 									"style" : "",
 									"text" : "print"
 								}
@@ -241,7 +296,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 30.0, 520.0, 45.0, 22.0 ],
+									"patching_rect" : [ 508.0, 557.0, 45.0, 22.0 ],
 									"style" : "",
 									"text" : "zl.sect"
 								}
@@ -254,7 +309,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "list" ],
-									"patching_rect" : [ 30.0, 218.0, 40.0, 22.0 ],
+									"patching_rect" : [ 508.0, 255.0, 40.0, 22.0 ],
 									"style" : "",
 									"text" : "atoi"
 								}
@@ -267,22 +322,9 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "list" ],
-									"patching_rect" : [ 248.0, 216.0, 92.0, 22.0 ],
+									"patching_rect" : [ 726.0, 253.0, 92.0, 22.0 ],
 									"style" : "",
 									"text" : "atoi"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-6",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 47.5, 165.0, 44.0, 22.0 ],
-									"style" : "",
-									"text" : "phone"
 								}
 
 							}
@@ -439,15 +481,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-18", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-16", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-15", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -488,15 +521,6 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-20", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-9", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-21", 0 ]
 								}
 
 							}
@@ -556,10 +580,28 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-18", 0 ],
+									"destination" : [ "obj-56", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-6", 0 ]
+									"source" : [ "obj-40", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-40", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-53", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-40", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-55", 0 ]
 								}
 
 							}
@@ -2456,6 +2498,12 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "graphemes2.txt",
+				"bootpath" : "~/Documents/Max 7/Library/A Vulgar Language",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tophoneme.js",
 				"bootpath" : "~/Documents/Max 7/Library/A Vulgar Language",
 				"type" : "TEXT",
 				"implicit" : 1
