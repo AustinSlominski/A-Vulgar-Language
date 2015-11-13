@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 39.0, 106.0, 368.0, 571.0 ],
+		"rect" : [ 39.0, 106.0, 364.0, 571.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,13 +38,164 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-17",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 6,
+							"architecture" : "x86",
+							"modernui" : 1
+						}
+,
+						"rect" : [ 517.0, 168.0, 640.0, 480.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"visible" : 1,
+						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-7",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 185.0, 127.0, 37.0, 22.0 ],
+									"style" : "",
+									"text" : "clear"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 71.0, 177.0, 74.0, 22.0 ],
+									"saved_object_attributes" : 									{
+										"embed" : 0
+									}
+,
+									"style" : "",
+									"text" : "coll prespell"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-3",
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 78.0, 396.0, 30.0, 30.0 ],
+									"style" : ""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-2",
+									"maxclass" : "inlet",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 71.0, 121.0, 30.0, 30.0 ],
+									"style" : ""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontface" : 1,
+									"fontname" : "Helvetica Neue Bold",
+									"fontsize" : 18.0,
+									"id" : "obj-6",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 8.666672, 6.0, 618.0, 28.0 ],
+									"style" : "",
+									"text" : "a somewhat hacky solution to the list of graphemes being out of order"
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-7", 0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 79.666672, 190.0, 67.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"description" : "",
+						"digest" : "",
+						"globalpatchername" : "",
+						"style" : "",
+						"tags" : ""
+					}
+,
+					"style" : "",
+					"text" : "p respeller"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-26",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 8.666672, 199.0, 24.0, 24.0 ],
+					"patching_rect" : [ 8.666672, 190.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -56,7 +207,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 109.666672, 154.0, 36.0, 22.0 ],
+					"patching_rect" : [ 217.333344, 154.0, 36.0, 22.0 ],
 					"style" : "",
 					"text" : "write"
 				}
@@ -69,7 +220,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 147.666672, 154.0, 37.0, 22.0 ],
+					"patching_rect" : [ 255.333344, 154.0, 37.0, 22.0 ],
 					"style" : "",
 					"text" : "clear"
 				}
@@ -82,7 +233,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 79.666672, 199.0, 92.0, 22.0 ],
+					"patching_rect" : [ 189.333344, 190.0, 92.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0
 					}
@@ -99,7 +250,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 109.666672, 118.0, 254.0, 20.0 ],
+					"patching_rect" : [ 109.666672, 118.0, 247.333328, 20.0 ],
 					"style" : "",
 					"text" : "3. Split into phonemes, wait for bang out"
 				}
@@ -164,7 +315,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 160.333359, 298.0, 131.0, 20.0 ],
+					"patching_rect" : [ 192.666672, 463.0, 131.0, 20.0 ],
 					"style" : "",
 					"text" : "dump into tographeme"
 				}
@@ -187,7 +338,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 559.0, 79.0, 615.0, 683.0 ],
+						"rect" : [ 521.0, 79.0, 615.0, 683.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -214,21 +365,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
-								"box" : 								{
-									"id" : "obj-60",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 122.0, 415.0, 30.0, 22.0 ],
-									"style" : "",
-									"text" : "t b l"
-								}
-
-							}
-, 							{
 								"box" : 								{
 									"id" : "obj-44",
 									"maxclass" : "newobj",
@@ -250,19 +387,6 @@
 									"patching_rect" : [ 117.75, 985.800049, 62.0, 22.0 ],
 									"style" : "",
 									"text" : "s grReset"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-40",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 101.0, 376.0, 60.0, 22.0 ],
-									"style" : "",
-									"text" : "r grReset"
 								}
 
 							}
@@ -729,7 +853,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 31.899994, 486.999939, 68.0, 22.0 ],
+									"patching_rect" : [ 31.899994, 491.999939, 68.0, 22.0 ],
 									"style" : "",
 									"text" : "s endWord"
 								}
@@ -780,9 +904,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 167.466675, 85.400055, 58.0, 22.0 ],
+									"patching_rect" : [ 167.466675, 85.400055, 51.0, 22.0 ],
 									"style" : "",
-									"text" : "metro 40"
+									"text" : "metro 4"
 								}
 
 							}
@@ -846,11 +970,11 @@
 									"id" : "obj-73",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 3,
-									"outlettype" : [ "bang", "int", "" ],
-									"patching_rect" : [ 73.96666, 415.0, 40.0, 22.0 ],
+									"numoutlets" : 2,
+									"outlettype" : [ "bang", "int" ],
+									"patching_rect" : [ 73.96666, 415.0, 34.0, 22.0 ],
 									"style" : "",
-									"text" : "t b 0 l"
+									"text" : "t b 0"
 								}
 
 							}
@@ -965,7 +1089,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 202.0, 432.0, 59.0, 22.0 ],
+									"patching_rect" : [ 202.0, 364.0, 59.0, 22.0 ],
 									"style" : "",
 									"text" : "tosymbol"
 								}
@@ -1046,7 +1170,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 201.75, 951.800049, 137.0, 22.0 ],
 									"style" : "",
-									"text" : "\"103 101\""
+									"text" : "\"99 107\""
 								}
 
 							}
@@ -1169,6 +1293,583 @@
 							}
 , 							{
 								"box" : 								{
+									"coll_data" : 									{
+										"count" : 143,
+										"data" : [ 											{
+												"key" : "a",
+												"value" : [ "{a}{ā}{ā}{ə}{e}{o}{ä}{ô}" ]
+											}
+, 											{
+												"key" : "ae",
+												"value" : [ "{e}" ]
+											}
+, 											{
+												"key" : "ai",
+												"value" : [ "{a}{e}{ī}" ]
+											}
+, 											{
+												"key" : "aigh",
+												"value" : [ "{ā}" ]
+											}
+, 											{
+												"key" : "air",
+												"value" : [ "{ã}" ]
+											}
+, 											{
+												"key" : "ar",
+												"value" : [ "{ä}{ô}{ə}" ]
+											}
+, 											{
+												"key" : "are",
+												"value" : [ "{ã}" ]
+											}
+, 											{
+												"key" : "au",
+												"value" : [ "{a}{ā}{o}{ä}{ô}" ]
+											}
+, 											{
+												"key" : "augh",
+												"value" : [ "{ô}" ]
+											}
+, 											{
+												"key" : "aw",
+												"value" : [ "{o}{ô}" ]
+											}
+, 											{
+												"key" : "ay",
+												"value" : [ "{e}{ē}{ā}" ]
+											}
+, 											{
+												"key" : "ayer",
+												"value" : [ "{ã}" ]
+											}
+, 											{
+												"key" : "b",
+												"value" : [ "{b}" ]
+											}
+, 											{
+												"key" : "bb",
+												"value" : [ "{b}" ]
+											}
+, 											{
+												"key" : "c",
+												"value" : [ "{s}{k}" ]
+											}
+, 											{
+												"key" : "cc",
+												"value" : [ "{k}" ]
+											}
+, 											{
+												"key" : "ce",
+												"value" : [ "{s}{sh}" ]
+											}
+, 											{
+												"key" : "ch",
+												"value" : [ "{ch}{sh}{k}" ]
+											}
+, 											{
+												"key" : "ci",
+												"value" : [ "{sh}" ]
+											}
+, 											{
+												"key" : "ck",
+												"value" : [ "{k}" ]
+											}
+, 											{
+												"key" : "d",
+												"value" : [ "{d}" ]
+											}
+, 											{
+												"key" : "dd",
+												"value" : [ "{d}" ]
+											}
+, 											{
+												"key" : "dge",
+												"value" : [ "{j}" ]
+											}
+, 											{
+												"key" : "di",
+												"value" : [ "{j}" ]
+											}
+, 											{
+												"key" : "e",
+												"value" : [ "{e}{ē}{i}{ə}" ]
+											}
+, 											{
+												"key" : "ea",
+												"value" : [ "{ā}{e}{ē}" ]
+											}
+, 											{
+												"key" : "ear",
+												"value" : [ "{ã}{ä}{ēə}{û}" ]
+											}
+, 											{
+												"key" : "eau",
+												"value" : [ "{yü}{ō}" ]
+											}
+, 											{
+												"key" : "ed",
+												"value" : [ "{d}{t}" ]
+											}
+, 											{
+												"key" : "ee",
+												"value" : [ "{ē}" ]
+											}
+, 											{
+												"key" : "eer",
+												"value" : [ "{ēə}" ]
+											}
+, 											{
+												"key" : "ei",
+												"value" : [ "{ā}{e}{ē}" ]
+											}
+, 											{
+												"key" : "eigh",
+												"value" : [ "{ā}{ī}" ]
+											}
+, 											{
+												"key" : "eir",
+												"value" : [ "{ã}" ]
+											}
+, 											{
+												"key" : "eo",
+												"value" : [ "{e}{ē}" ]
+											}
+, 											{
+												"key" : "er",
+												"value" : [ "{ä}{û}{ā}{ə}" ]
+											}
+, 											{
+												"key" : "ere",
+												"value" : [ "{ã}{ēə}" ]
+											}
+, 											{
+												"key" : "et",
+												"value" : [ "{ā}" ]
+											}
+, 											{
+												"key" : "eu",
+												"value" : [ "{yü}" ]
+											}
+, 											{
+												"key" : "eue",
+												"value" : [ "{yü}" ]
+											}
+, 											{
+												"key" : "eur",
+												"value" : [ "{ə}" ]
+											}
+, 											{
+												"key" : "ew",
+												"value" : [ "{yü}{ō}{ū}" ]
+											}
+, 											{
+												"key" : "ey",
+												"value" : [ "{ā}{ē}" ]
+											}
+, 											{
+												"key" : "f",
+												"value" : [ "{f}{v}" ]
+											}
+, 											{
+												"key" : "ff",
+												"value" : [ "{f}" ]
+											}
+, 											{
+												"key" : "ft",
+												"value" : [ "{f}" ]
+											}
+, 											{
+												"key" : "g",
+												"value" : [ "{g}{j}" ]
+											}
+, 											{
+												"key" : "ge",
+												"value" : [ "{j}" ]
+											}
+, 											{
+												"key" : "gg",
+												"value" : [ "{g}{j}" ]
+											}
+, 											{
+												"key" : "gh",
+												"value" : [ "{f}{g}" ]
+											}
+, 											{
+												"key" : "gn",
+												"value" : [ "{n}" ]
+											}
+, 											{
+												"key" : "gu",
+												"value" : [ "{g}" ]
+											}
+, 											{
+												"key" : "gue",
+												"value" : [ "{g}" ]
+											}
+, 											{
+												"key" : "h",
+												"value" : [ "{h}" ]
+											}
+, 											{
+												"key" : "ho",
+												"value" : [ "{o}" ]
+											}
+, 											{
+												"key" : "i",
+												"value" : [ "{ē}{i}{ī}{ə}{y}" ]
+											}
+, 											{
+												"key" : "ie",
+												"value" : [ "{e}{ē}{i}{ī}" ]
+											}
+, 											{
+												"key" : "ier",
+												"value" : [ "{ēə}" ]
+											}
+, 											{
+												"key" : "ieu",
+												"value" : [ "{yü}" ]
+											}
+, 											{
+												"key" : "iew",
+												"value" : [ "{yü}" ]
+											}
+, 											{
+												"key" : "igh",
+												"value" : [ "{ī}" ]
+											}
+, 											{
+												"key" : "ir",
+												"value" : [ "{û}" ]
+											}
+, 											{
+												"key" : "is",
+												"value" : [ "{ī}" ]
+											}
+, 											{
+												"key" : "j",
+												"value" : [ "{j}{y}" ]
+											}
+, 											{
+												"key" : "k",
+												"value" : [ "{k}" ]
+											}
+, 											{
+												"key" : "kn",
+												"value" : [ "{n}" ]
+											}
+, 											{
+												"key" : "l",
+												"value" : [ "{l}" ]
+											}
+, 											{
+												"key" : "lf",
+												"value" : [ "{f}" ]
+											}
+, 											{
+												"key" : "lk",
+												"value" : [ "{k}" ]
+											}
+, 											{
+												"key" : "ll",
+												"value" : [ "{l}" ]
+											}
+, 											{
+												"key" : "lm",
+												"value" : [ "{m}" ]
+											}
+, 											{
+												"key" : "m",
+												"value" : [ "{m}" ]
+											}
+, 											{
+												"key" : "mb",
+												"value" : [ "{m}" ]
+											}
+, 											{
+												"key" : "mm",
+												"value" : [ "{m}" ]
+											}
+, 											{
+												"key" : "mn",
+												"value" : [ "{m}" ]
+											}
+, 											{
+												"key" : "n",
+												"value" : [ "{n}{ng}" ]
+											}
+, 											{
+												"key" : "ng",
+												"value" : [ "{ng}" ]
+											}
+, 											{
+												"key" : "ngue",
+												"value" : [ "{ng}" ]
+											}
+, 											{
+												"key" : "nn",
+												"value" : [ "{n}" ]
+											}
+, 											{
+												"key" : "o",
+												"value" : [ "{o}{ō}{oo}{u}{ū}{i}{w}" ]
+											}
+, 											{
+												"key" : "oa",
+												"value" : [ "{ō}" ]
+											}
+, 											{
+												"key" : "oar",
+												"value" : [ "{ô}" ]
+											}
+, 											{
+												"key" : "oe",
+												"value" : [ "{ē}" ]
+											}
+, 											{
+												"key" : "oe",
+												"value" : [ "{ō}{ū}" ]
+											}
+, 											{
+												"key" : "oew",
+												"value" : [ "{ū}" ]
+											}
+, 											{
+												"key" : "oi",
+												"value" : [ "{oi}" ]
+											}
+, 											{
+												"key" : "oo",
+												"value" : [ "{u}{ū}{ō}{oo}" ]
+											}
+, 											{
+												"key" : "oor",
+												"value" : [ "{ô}" ]
+											}
+, 											{
+												"key" : "or",
+												"value" : [ "{û}{ə}{ô}" ]
+											}
+, 											{
+												"key" : "ore",
+												"value" : [ "{ô}" ]
+											}
+, 											{
+												"key" : "ou",
+												"value" : [ "{oo}{u}{ow}{ū}" ]
+											}
+, 											{
+												"key" : "ough",
+												"value" : [ "{o}{ow}{ô}{ō}{ū}" ]
+											}
+, 											{
+												"key" : "our",
+												"value" : [ "{û}{üə}{ə}{ô}" ]
+											}
+, 											{
+												"key" : "ow",
+												"value" : [ "{ow}{ō}" ]
+											}
+, 											{
+												"key" : "oy",
+												"value" : [ "{oi}" ]
+											}
+, 											{
+												"key" : "p",
+												"value" : [ "{p}" ]
+											}
+, 											{
+												"key" : "ph",
+												"value" : [ "{f}{v}" ]
+											}
+, 											{
+												"key" : "pn",
+												"value" : [ "{n}" ]
+											}
+, 											{
+												"key" : "pp",
+												"value" : [ "{p}" ]
+											}
+, 											{
+												"key" : "ps",
+												"value" : [ "{s}" ]
+											}
+, 											{
+												"key" : "q",
+												"value" : [ "{k}" ]
+											}
+, 											{
+												"key" : "qu",
+												"value" : [ "{k}" ]
+											}
+, 											{
+												"key" : "r",
+												"value" : [ "{r}" ]
+											}
+, 											{
+												"key" : "re",
+												"value" : [ "{ə}" ]
+											}
+, 											{
+												"key" : "rh",
+												"value" : [ "{r}" ]
+											}
+, 											{
+												"key" : "rr",
+												"value" : [ "{r}" ]
+											}
+, 											{
+												"key" : "s",
+												"value" : [ "{s}{z}{sh}{zh}" ]
+											}
+, 											{
+												"key" : "sc",
+												"value" : [ "{s}" ]
+											}
+, 											{
+												"key" : "sci",
+												"value" : [ "{sh}" ]
+											}
+, 											{
+												"key" : "se",
+												"value" : [ "{s}{z}" ]
+											}
+, 											{
+												"key" : "sh",
+												"value" : [ "{sh}" ]
+											}
+, 											{
+												"key" : "si",
+												"value" : [ "{sh}{zh}" ]
+											}
+, 											{
+												"key" : "ss",
+												"value" : [ "{s}{z}" ]
+											}
+, 											{
+												"key" : "st",
+												"value" : [ "{s}" ]
+											}
+, 											{
+												"key" : "t",
+												"value" : [ "{t}" ]
+											}
+, 											{
+												"key" : "tch",
+												"value" : [ "{ch}" ]
+											}
+, 											{
+												"key" : "te",
+												"value" : [ "{ch}" ]
+											}
+, 											{
+												"key" : "th",
+												"value" : [ "{t}{th}" ]
+											}
+, 											{
+												"key" : "ti",
+												"value" : [ "{ch}{sh}" ]
+											}
+, 											{
+												"key" : "tt",
+												"value" : [ "{t}" ]
+											}
+, 											{
+												"key" : "tu",
+												"value" : [ "{ch}" ]
+											}
+, 											{
+												"key" : "u",
+												"value" : [ "{e}{i}{oo}{u}{yü}{w}" ]
+											}
+, 											{
+												"key" : "ue",
+												"value" : [ "{ū}" ]
+											}
+, 											{
+												"key" : "ui",
+												"value" : [ "{i}{ū}" ]
+											}
+, 											{
+												"key" : "ul",
+												"value" : [ "{yü}" ]
+											}
+, 											{
+												"key" : "uoy",
+												"value" : [ "{oi}" ]
+											}
+, 											{
+												"key" : "ur",
+												"value" : [ "{û}{ə}" ]
+											}
+, 											{
+												"key" : "ure",
+												"value" : [ "{üə}" ]
+											}
+, 											{
+												"key" : "uy",
+												"value" : [ "{ī}" ]
+											}
+, 											{
+												"key" : "v",
+												"value" : [ "{v}" ]
+											}
+, 											{
+												"key" : "ve",
+												"value" : [ "{v}" ]
+											}
+, 											{
+												"key" : "w",
+												"value" : [ "{w}" ]
+											}
+, 											{
+												"key" : "wh",
+												"value" : [ "{h}{w}" ]
+											}
+, 											{
+												"key" : "wr",
+												"value" : [ "{r}" ]
+											}
+, 											{
+												"key" : "x",
+												"value" : [ "{z}{k}" ]
+											}
+, 											{
+												"key" : "y",
+												"value" : [ "{y}{ē}{i}{ī}" ]
+											}
+, 											{
+												"key" : "ye",
+												"value" : [ "{ī}" ]
+											}
+, 											{
+												"key" : "you",
+												"value" : [ "{yü}" ]
+											}
+, 											{
+												"key" : "yr",
+												"value" : [ "{û}" ]
+											}
+, 											{
+												"key" : "yu",
+												"value" : [ "{yü}" ]
+											}
+, 											{
+												"key" : "z",
+												"value" : [ "{z}{zh}" ]
+											}
+, 											{
+												"key" : "ze",
+												"value" : [ "{z}" ]
+											}
+, 											{
+												"key" : "zz",
+												"value" : [ "{z}" ]
+											}
+ ]
+									}
+,
 									"id" : "obj-15",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -1176,7 +1877,7 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 35.0, 198.0, 166.0, 22.0 ],
 									"saved_object_attributes" : 									{
-										"embed" : 0
+										"embed" : 1
 									}
 ,
 									"style" : "",
@@ -1650,15 +2351,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-60", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-40", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-32", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1936,7 +2628,7 @@
 									"destination" : [ "obj-64", 3 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 93.96666, 447.599976, 168.399994, 447.599976, 168.399994, 341.999969, 88.724991, 341.999969 ],
+									"midpoints" : [ 98.46666, 447.599976, 168.399994, 447.599976, 168.399994, 341.999969, 88.724991, 341.999969 ],
 									"source" : [ "obj-73", 1 ]
 								}
 
@@ -2034,6 +2726,583 @@
 			}
 , 			{
 				"box" : 				{
+					"coll_data" : 					{
+						"count" : 143,
+						"data" : [ 							{
+								"key" : "a",
+								"value" : [ "{a}{ā}{ā}{ə}{e}{o}{ä}{ô}" ]
+							}
+, 							{
+								"key" : "ae",
+								"value" : [ "{e}" ]
+							}
+, 							{
+								"key" : "ai",
+								"value" : [ "{a}{e}{ī}" ]
+							}
+, 							{
+								"key" : "aigh",
+								"value" : [ "{ā}" ]
+							}
+, 							{
+								"key" : "air",
+								"value" : [ "{ã}" ]
+							}
+, 							{
+								"key" : "ar",
+								"value" : [ "{ä}{ô}{ə}" ]
+							}
+, 							{
+								"key" : "are",
+								"value" : [ "{ã}" ]
+							}
+, 							{
+								"key" : "au",
+								"value" : [ "{a}{ā}{o}{ä}{ô}" ]
+							}
+, 							{
+								"key" : "augh",
+								"value" : [ "{ô}" ]
+							}
+, 							{
+								"key" : "aw",
+								"value" : [ "{o}{ô}" ]
+							}
+, 							{
+								"key" : "ay",
+								"value" : [ "{e}{ē}{ā}" ]
+							}
+, 							{
+								"key" : "ayer",
+								"value" : [ "{ã}" ]
+							}
+, 							{
+								"key" : "b",
+								"value" : [ "{b}" ]
+							}
+, 							{
+								"key" : "bb",
+								"value" : [ "{b}" ]
+							}
+, 							{
+								"key" : "c",
+								"value" : [ "{s}{k}" ]
+							}
+, 							{
+								"key" : "cc",
+								"value" : [ "{k}" ]
+							}
+, 							{
+								"key" : "ce",
+								"value" : [ "{s}{sh}" ]
+							}
+, 							{
+								"key" : "ch",
+								"value" : [ "{ch}{sh}{k}" ]
+							}
+, 							{
+								"key" : "ci",
+								"value" : [ "{sh}" ]
+							}
+, 							{
+								"key" : "ck",
+								"value" : [ "{k}" ]
+							}
+, 							{
+								"key" : "d",
+								"value" : [ "{d}" ]
+							}
+, 							{
+								"key" : "dd",
+								"value" : [ "{d}" ]
+							}
+, 							{
+								"key" : "dge",
+								"value" : [ "{j}" ]
+							}
+, 							{
+								"key" : "di",
+								"value" : [ "{j}" ]
+							}
+, 							{
+								"key" : "e",
+								"value" : [ "{e}{ē}{i}{ə}" ]
+							}
+, 							{
+								"key" : "ea",
+								"value" : [ "{ā}{e}{ē}" ]
+							}
+, 							{
+								"key" : "ear",
+								"value" : [ "{ã}{ä}{ēə}{û}" ]
+							}
+, 							{
+								"key" : "eau",
+								"value" : [ "{yü}{ō}" ]
+							}
+, 							{
+								"key" : "ed",
+								"value" : [ "{d}{t}" ]
+							}
+, 							{
+								"key" : "ee",
+								"value" : [ "{ē}" ]
+							}
+, 							{
+								"key" : "eer",
+								"value" : [ "{ēə}" ]
+							}
+, 							{
+								"key" : "ei",
+								"value" : [ "{ā}{e}{ē}" ]
+							}
+, 							{
+								"key" : "eigh",
+								"value" : [ "{ā}{ī}" ]
+							}
+, 							{
+								"key" : "eir",
+								"value" : [ "{ã}" ]
+							}
+, 							{
+								"key" : "eo",
+								"value" : [ "{e}{ē}" ]
+							}
+, 							{
+								"key" : "er",
+								"value" : [ "{ä}{û}{ā}{ə}" ]
+							}
+, 							{
+								"key" : "ere",
+								"value" : [ "{ã}{ēə}" ]
+							}
+, 							{
+								"key" : "et",
+								"value" : [ "{ā}" ]
+							}
+, 							{
+								"key" : "eu",
+								"value" : [ "{yü}" ]
+							}
+, 							{
+								"key" : "eue",
+								"value" : [ "{yü}" ]
+							}
+, 							{
+								"key" : "eur",
+								"value" : [ "{ə}" ]
+							}
+, 							{
+								"key" : "ew",
+								"value" : [ "{yü}{ō}{ū}" ]
+							}
+, 							{
+								"key" : "ey",
+								"value" : [ "{ā}{ē}" ]
+							}
+, 							{
+								"key" : "f",
+								"value" : [ "{f}{v}" ]
+							}
+, 							{
+								"key" : "ff",
+								"value" : [ "{f}" ]
+							}
+, 							{
+								"key" : "ft",
+								"value" : [ "{f}" ]
+							}
+, 							{
+								"key" : "g",
+								"value" : [ "{g}{j}" ]
+							}
+, 							{
+								"key" : "ge",
+								"value" : [ "{j}" ]
+							}
+, 							{
+								"key" : "gg",
+								"value" : [ "{g}{j}" ]
+							}
+, 							{
+								"key" : "gh",
+								"value" : [ "{f}{g}" ]
+							}
+, 							{
+								"key" : "gn",
+								"value" : [ "{n}" ]
+							}
+, 							{
+								"key" : "gu",
+								"value" : [ "{g}" ]
+							}
+, 							{
+								"key" : "gue",
+								"value" : [ "{g}" ]
+							}
+, 							{
+								"key" : "h",
+								"value" : [ "{h}" ]
+							}
+, 							{
+								"key" : "ho",
+								"value" : [ "{o}" ]
+							}
+, 							{
+								"key" : "i",
+								"value" : [ "{ē}{i}{ī}{ə}{y}" ]
+							}
+, 							{
+								"key" : "ie",
+								"value" : [ "{e}{ē}{i}{ī}" ]
+							}
+, 							{
+								"key" : "ier",
+								"value" : [ "{ēə}" ]
+							}
+, 							{
+								"key" : "ieu",
+								"value" : [ "{yü}" ]
+							}
+, 							{
+								"key" : "iew",
+								"value" : [ "{yü}" ]
+							}
+, 							{
+								"key" : "igh",
+								"value" : [ "{ī}" ]
+							}
+, 							{
+								"key" : "ir",
+								"value" : [ "{û}" ]
+							}
+, 							{
+								"key" : "is",
+								"value" : [ "{ī}" ]
+							}
+, 							{
+								"key" : "j",
+								"value" : [ "{j}{y}" ]
+							}
+, 							{
+								"key" : "k",
+								"value" : [ "{k}" ]
+							}
+, 							{
+								"key" : "kn",
+								"value" : [ "{n}" ]
+							}
+, 							{
+								"key" : "l",
+								"value" : [ "{l}" ]
+							}
+, 							{
+								"key" : "lf",
+								"value" : [ "{f}" ]
+							}
+, 							{
+								"key" : "lk",
+								"value" : [ "{k}" ]
+							}
+, 							{
+								"key" : "ll",
+								"value" : [ "{l}" ]
+							}
+, 							{
+								"key" : "lm",
+								"value" : [ "{m}" ]
+							}
+, 							{
+								"key" : "m",
+								"value" : [ "{m}" ]
+							}
+, 							{
+								"key" : "mb",
+								"value" : [ "{m}" ]
+							}
+, 							{
+								"key" : "mm",
+								"value" : [ "{m}" ]
+							}
+, 							{
+								"key" : "mn",
+								"value" : [ "{m}" ]
+							}
+, 							{
+								"key" : "n",
+								"value" : [ "{n}{ng}" ]
+							}
+, 							{
+								"key" : "ng",
+								"value" : [ "{ng}" ]
+							}
+, 							{
+								"key" : "ngue",
+								"value" : [ "{ng}" ]
+							}
+, 							{
+								"key" : "nn",
+								"value" : [ "{n}" ]
+							}
+, 							{
+								"key" : "o",
+								"value" : [ "{o}{ō}{oo}{u}{ū}{i}{w}" ]
+							}
+, 							{
+								"key" : "oa",
+								"value" : [ "{ō}" ]
+							}
+, 							{
+								"key" : "oar",
+								"value" : [ "{ô}" ]
+							}
+, 							{
+								"key" : "oe",
+								"value" : [ "{ē}" ]
+							}
+, 							{
+								"key" : "oe",
+								"value" : [ "{ō}{ū}" ]
+							}
+, 							{
+								"key" : "oew",
+								"value" : [ "{ū}" ]
+							}
+, 							{
+								"key" : "oi",
+								"value" : [ "{oi}" ]
+							}
+, 							{
+								"key" : "oo",
+								"value" : [ "{u}{ū}{ō}{oo}" ]
+							}
+, 							{
+								"key" : "oor",
+								"value" : [ "{ô}" ]
+							}
+, 							{
+								"key" : "or",
+								"value" : [ "{û}{ə}{ô}" ]
+							}
+, 							{
+								"key" : "ore",
+								"value" : [ "{ô}" ]
+							}
+, 							{
+								"key" : "ou",
+								"value" : [ "{oo}{u}{ow}{ū}" ]
+							}
+, 							{
+								"key" : "ough",
+								"value" : [ "{o}{ow}{ô}{ō}{ū}" ]
+							}
+, 							{
+								"key" : "our",
+								"value" : [ "{û}{üə}{ə}{ô}" ]
+							}
+, 							{
+								"key" : "ow",
+								"value" : [ "{ow}{ō}" ]
+							}
+, 							{
+								"key" : "oy",
+								"value" : [ "{oi}" ]
+							}
+, 							{
+								"key" : "p",
+								"value" : [ "{p}" ]
+							}
+, 							{
+								"key" : "ph",
+								"value" : [ "{f}{v}" ]
+							}
+, 							{
+								"key" : "pn",
+								"value" : [ "{n}" ]
+							}
+, 							{
+								"key" : "pp",
+								"value" : [ "{p}" ]
+							}
+, 							{
+								"key" : "ps",
+								"value" : [ "{s}" ]
+							}
+, 							{
+								"key" : "q",
+								"value" : [ "{k}" ]
+							}
+, 							{
+								"key" : "qu",
+								"value" : [ "{k}" ]
+							}
+, 							{
+								"key" : "r",
+								"value" : [ "{r}" ]
+							}
+, 							{
+								"key" : "re",
+								"value" : [ "{ə}" ]
+							}
+, 							{
+								"key" : "rh",
+								"value" : [ "{r}" ]
+							}
+, 							{
+								"key" : "rr",
+								"value" : [ "{r}" ]
+							}
+, 							{
+								"key" : "s",
+								"value" : [ "{s}{z}{sh}{zh}" ]
+							}
+, 							{
+								"key" : "sc",
+								"value" : [ "{s}" ]
+							}
+, 							{
+								"key" : "sci",
+								"value" : [ "{sh}" ]
+							}
+, 							{
+								"key" : "se",
+								"value" : [ "{s}{z}" ]
+							}
+, 							{
+								"key" : "sh",
+								"value" : [ "{sh}" ]
+							}
+, 							{
+								"key" : "si",
+								"value" : [ "{sh}{zh}" ]
+							}
+, 							{
+								"key" : "ss",
+								"value" : [ "{s}{z}" ]
+							}
+, 							{
+								"key" : "st",
+								"value" : [ "{s}" ]
+							}
+, 							{
+								"key" : "t",
+								"value" : [ "{t}" ]
+							}
+, 							{
+								"key" : "tch",
+								"value" : [ "{ch}" ]
+							}
+, 							{
+								"key" : "te",
+								"value" : [ "{ch}" ]
+							}
+, 							{
+								"key" : "th",
+								"value" : [ "{t}{th}" ]
+							}
+, 							{
+								"key" : "ti",
+								"value" : [ "{ch}{sh}" ]
+							}
+, 							{
+								"key" : "tt",
+								"value" : [ "{t}" ]
+							}
+, 							{
+								"key" : "tu",
+								"value" : [ "{ch}" ]
+							}
+, 							{
+								"key" : "u",
+								"value" : [ "{e}{i}{oo}{u}{yü}{w}" ]
+							}
+, 							{
+								"key" : "ue",
+								"value" : [ "{ū}" ]
+							}
+, 							{
+								"key" : "ui",
+								"value" : [ "{i}{ū}" ]
+							}
+, 							{
+								"key" : "ul",
+								"value" : [ "{yü}" ]
+							}
+, 							{
+								"key" : "uoy",
+								"value" : [ "{oi}" ]
+							}
+, 							{
+								"key" : "ur",
+								"value" : [ "{û}{ə}" ]
+							}
+, 							{
+								"key" : "ure",
+								"value" : [ "{üə}" ]
+							}
+, 							{
+								"key" : "uy",
+								"value" : [ "{ī}" ]
+							}
+, 							{
+								"key" : "v",
+								"value" : [ "{v}" ]
+							}
+, 							{
+								"key" : "ve",
+								"value" : [ "{v}" ]
+							}
+, 							{
+								"key" : "w",
+								"value" : [ "{w}" ]
+							}
+, 							{
+								"key" : "wh",
+								"value" : [ "{h}{w}" ]
+							}
+, 							{
+								"key" : "wr",
+								"value" : [ "{r}" ]
+							}
+, 							{
+								"key" : "x",
+								"value" : [ "{z}{k}" ]
+							}
+, 							{
+								"key" : "y",
+								"value" : [ "{y}{ē}{i}{ī}" ]
+							}
+, 							{
+								"key" : "ye",
+								"value" : [ "{ī}" ]
+							}
+, 							{
+								"key" : "you",
+								"value" : [ "{yü}" ]
+							}
+, 							{
+								"key" : "yr",
+								"value" : [ "{û}" ]
+							}
+, 							{
+								"key" : "yu",
+								"value" : [ "{yü}" ]
+							}
+, 							{
+								"key" : "z",
+								"value" : [ "{z}{zh}" ]
+							}
+, 							{
+								"key" : "ze",
+								"value" : [ "{z}" ]
+							}
+, 							{
+								"key" : "zz",
+								"value" : [ "{z}" ]
+							}
+ ]
+					}
+,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -2041,7 +3310,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 236.0, 64.0, 92.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"embed" : 0
+						"embed" : 1
 					}
 ,
 					"style" : "",
@@ -2082,7 +3351,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 8.666672, 298.0, 50.0, 22.0 ],
+					"patching_rect" : [ 8.666672, 289.0, 50.0, 22.0 ],
 					"style" : "",
 					"text" : "{f}{v}"
 				}
@@ -2095,7 +3364,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 211.000015, 237.0, 24.0, 24.0 ],
+					"patching_rect" : [ 243.333328, 402.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -2107,7 +3376,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 164.666672, 237.0, 43.0, 22.0 ],
+					"patching_rect" : [ 196.999985, 402.0, 43.0, 22.0 ],
 					"style" : "",
 					"text" : "length"
 				}
@@ -2429,7 +3698,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 164.666672, 274.0, 111.666687, 22.0 ],
+					"patching_rect" : [ 196.999985, 439.0, 111.666687, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -2629,6 +3898,583 @@
 							}
 , 							{
 								"box" : 								{
+									"coll_data" : 									{
+										"count" : 143,
+										"data" : [ 											{
+												"key" : "a",
+												"value" : [ "{a}{ā}{ā}{ə}{e}{o}{ä}{ô}" ]
+											}
+, 											{
+												"key" : "ae",
+												"value" : [ "{e}" ]
+											}
+, 											{
+												"key" : "ai",
+												"value" : [ "{a}{e}{ī}" ]
+											}
+, 											{
+												"key" : "aigh",
+												"value" : [ "{ā}" ]
+											}
+, 											{
+												"key" : "air",
+												"value" : [ "{ã}" ]
+											}
+, 											{
+												"key" : "ar",
+												"value" : [ "{ä}{ô}{ə}" ]
+											}
+, 											{
+												"key" : "are",
+												"value" : [ "{ã}" ]
+											}
+, 											{
+												"key" : "au",
+												"value" : [ "{a}{ā}{o}{ä}{ô}" ]
+											}
+, 											{
+												"key" : "augh",
+												"value" : [ "{ô}" ]
+											}
+, 											{
+												"key" : "aw",
+												"value" : [ "{o}{ô}" ]
+											}
+, 											{
+												"key" : "ay",
+												"value" : [ "{e}{ē}{ā}" ]
+											}
+, 											{
+												"key" : "ayer",
+												"value" : [ "{ã}" ]
+											}
+, 											{
+												"key" : "b",
+												"value" : [ "{b}" ]
+											}
+, 											{
+												"key" : "bb",
+												"value" : [ "{b}" ]
+											}
+, 											{
+												"key" : "c",
+												"value" : [ "{s}{k}" ]
+											}
+, 											{
+												"key" : "cc",
+												"value" : [ "{k}" ]
+											}
+, 											{
+												"key" : "ce",
+												"value" : [ "{s}{sh}" ]
+											}
+, 											{
+												"key" : "ch",
+												"value" : [ "{ch}{sh}{k}" ]
+											}
+, 											{
+												"key" : "ci",
+												"value" : [ "{sh}" ]
+											}
+, 											{
+												"key" : "ck",
+												"value" : [ "{k}" ]
+											}
+, 											{
+												"key" : "d",
+												"value" : [ "{d}" ]
+											}
+, 											{
+												"key" : "dd",
+												"value" : [ "{d}" ]
+											}
+, 											{
+												"key" : "dge",
+												"value" : [ "{j}" ]
+											}
+, 											{
+												"key" : "di",
+												"value" : [ "{j}" ]
+											}
+, 											{
+												"key" : "e",
+												"value" : [ "{e}{ē}{i}{ə}" ]
+											}
+, 											{
+												"key" : "ea",
+												"value" : [ "{ā}{e}{ē}" ]
+											}
+, 											{
+												"key" : "ear",
+												"value" : [ "{ã}{ä}{ēə}{û}" ]
+											}
+, 											{
+												"key" : "eau",
+												"value" : [ "{yü}{ō}" ]
+											}
+, 											{
+												"key" : "ed",
+												"value" : [ "{d}{t}" ]
+											}
+, 											{
+												"key" : "ee",
+												"value" : [ "{ē}" ]
+											}
+, 											{
+												"key" : "eer",
+												"value" : [ "{ēə}" ]
+											}
+, 											{
+												"key" : "ei",
+												"value" : [ "{ā}{e}{ē}" ]
+											}
+, 											{
+												"key" : "eigh",
+												"value" : [ "{ā}{ī}" ]
+											}
+, 											{
+												"key" : "eir",
+												"value" : [ "{ã}" ]
+											}
+, 											{
+												"key" : "eo",
+												"value" : [ "{e}{ē}" ]
+											}
+, 											{
+												"key" : "er",
+												"value" : [ "{ä}{û}{ā}{ə}" ]
+											}
+, 											{
+												"key" : "ere",
+												"value" : [ "{ã}{ēə}" ]
+											}
+, 											{
+												"key" : "et",
+												"value" : [ "{ā}" ]
+											}
+, 											{
+												"key" : "eu",
+												"value" : [ "{yü}" ]
+											}
+, 											{
+												"key" : "eue",
+												"value" : [ "{yü}" ]
+											}
+, 											{
+												"key" : "eur",
+												"value" : [ "{ə}" ]
+											}
+, 											{
+												"key" : "ew",
+												"value" : [ "{yü}{ō}{ū}" ]
+											}
+, 											{
+												"key" : "ey",
+												"value" : [ "{ā}{ē}" ]
+											}
+, 											{
+												"key" : "f",
+												"value" : [ "{f}{v}" ]
+											}
+, 											{
+												"key" : "ff",
+												"value" : [ "{f}" ]
+											}
+, 											{
+												"key" : "ft",
+												"value" : [ "{f}" ]
+											}
+, 											{
+												"key" : "g",
+												"value" : [ "{g}{j}" ]
+											}
+, 											{
+												"key" : "ge",
+												"value" : [ "{j}" ]
+											}
+, 											{
+												"key" : "gg",
+												"value" : [ "{g}{j}" ]
+											}
+, 											{
+												"key" : "gh",
+												"value" : [ "{f}{g}" ]
+											}
+, 											{
+												"key" : "gn",
+												"value" : [ "{n}" ]
+											}
+, 											{
+												"key" : "gu",
+												"value" : [ "{g}" ]
+											}
+, 											{
+												"key" : "gue",
+												"value" : [ "{g}" ]
+											}
+, 											{
+												"key" : "h",
+												"value" : [ "{h}" ]
+											}
+, 											{
+												"key" : "ho",
+												"value" : [ "{o}" ]
+											}
+, 											{
+												"key" : "i",
+												"value" : [ "{ē}{i}{ī}{ə}{y}" ]
+											}
+, 											{
+												"key" : "ie",
+												"value" : [ "{e}{ē}{i}{ī}" ]
+											}
+, 											{
+												"key" : "ier",
+												"value" : [ "{ēə}" ]
+											}
+, 											{
+												"key" : "ieu",
+												"value" : [ "{yü}" ]
+											}
+, 											{
+												"key" : "iew",
+												"value" : [ "{yü}" ]
+											}
+, 											{
+												"key" : "igh",
+												"value" : [ "{ī}" ]
+											}
+, 											{
+												"key" : "ir",
+												"value" : [ "{û}" ]
+											}
+, 											{
+												"key" : "is",
+												"value" : [ "{ī}" ]
+											}
+, 											{
+												"key" : "j",
+												"value" : [ "{j}{y}" ]
+											}
+, 											{
+												"key" : "k",
+												"value" : [ "{k}" ]
+											}
+, 											{
+												"key" : "kn",
+												"value" : [ "{n}" ]
+											}
+, 											{
+												"key" : "l",
+												"value" : [ "{l}" ]
+											}
+, 											{
+												"key" : "lf",
+												"value" : [ "{f}" ]
+											}
+, 											{
+												"key" : "lk",
+												"value" : [ "{k}" ]
+											}
+, 											{
+												"key" : "ll",
+												"value" : [ "{l}" ]
+											}
+, 											{
+												"key" : "lm",
+												"value" : [ "{m}" ]
+											}
+, 											{
+												"key" : "m",
+												"value" : [ "{m}" ]
+											}
+, 											{
+												"key" : "mb",
+												"value" : [ "{m}" ]
+											}
+, 											{
+												"key" : "mm",
+												"value" : [ "{m}" ]
+											}
+, 											{
+												"key" : "mn",
+												"value" : [ "{m}" ]
+											}
+, 											{
+												"key" : "n",
+												"value" : [ "{n}{ng}" ]
+											}
+, 											{
+												"key" : "ng",
+												"value" : [ "{ng}" ]
+											}
+, 											{
+												"key" : "ngue",
+												"value" : [ "{ng}" ]
+											}
+, 											{
+												"key" : "nn",
+												"value" : [ "{n}" ]
+											}
+, 											{
+												"key" : "o",
+												"value" : [ "{o}{ō}{oo}{u}{ū}{i}{w}" ]
+											}
+, 											{
+												"key" : "oa",
+												"value" : [ "{ō}" ]
+											}
+, 											{
+												"key" : "oar",
+												"value" : [ "{ô}" ]
+											}
+, 											{
+												"key" : "oe",
+												"value" : [ "{ē}" ]
+											}
+, 											{
+												"key" : "oe",
+												"value" : [ "{ō}{ū}" ]
+											}
+, 											{
+												"key" : "oew",
+												"value" : [ "{ū}" ]
+											}
+, 											{
+												"key" : "oi",
+												"value" : [ "{oi}" ]
+											}
+, 											{
+												"key" : "oo",
+												"value" : [ "{u}{ū}{ō}{oo}" ]
+											}
+, 											{
+												"key" : "oor",
+												"value" : [ "{ô}" ]
+											}
+, 											{
+												"key" : "or",
+												"value" : [ "{û}{ə}{ô}" ]
+											}
+, 											{
+												"key" : "ore",
+												"value" : [ "{ô}" ]
+											}
+, 											{
+												"key" : "ou",
+												"value" : [ "{oo}{u}{ow}{ū}" ]
+											}
+, 											{
+												"key" : "ough",
+												"value" : [ "{o}{ow}{ô}{ō}{ū}" ]
+											}
+, 											{
+												"key" : "our",
+												"value" : [ "{û}{üə}{ə}{ô}" ]
+											}
+, 											{
+												"key" : "ow",
+												"value" : [ "{ow}{ō}" ]
+											}
+, 											{
+												"key" : "oy",
+												"value" : [ "{oi}" ]
+											}
+, 											{
+												"key" : "p",
+												"value" : [ "{p}" ]
+											}
+, 											{
+												"key" : "ph",
+												"value" : [ "{f}{v}" ]
+											}
+, 											{
+												"key" : "pn",
+												"value" : [ "{n}" ]
+											}
+, 											{
+												"key" : "pp",
+												"value" : [ "{p}" ]
+											}
+, 											{
+												"key" : "ps",
+												"value" : [ "{s}" ]
+											}
+, 											{
+												"key" : "q",
+												"value" : [ "{k}" ]
+											}
+, 											{
+												"key" : "qu",
+												"value" : [ "{k}" ]
+											}
+, 											{
+												"key" : "r",
+												"value" : [ "{r}" ]
+											}
+, 											{
+												"key" : "re",
+												"value" : [ "{ə}" ]
+											}
+, 											{
+												"key" : "rh",
+												"value" : [ "{r}" ]
+											}
+, 											{
+												"key" : "rr",
+												"value" : [ "{r}" ]
+											}
+, 											{
+												"key" : "s",
+												"value" : [ "{s}{z}{sh}{zh}" ]
+											}
+, 											{
+												"key" : "sc",
+												"value" : [ "{s}" ]
+											}
+, 											{
+												"key" : "sci",
+												"value" : [ "{sh}" ]
+											}
+, 											{
+												"key" : "se",
+												"value" : [ "{s}{z}" ]
+											}
+, 											{
+												"key" : "sh",
+												"value" : [ "{sh}" ]
+											}
+, 											{
+												"key" : "si",
+												"value" : [ "{sh}{zh}" ]
+											}
+, 											{
+												"key" : "ss",
+												"value" : [ "{s}{z}" ]
+											}
+, 											{
+												"key" : "st",
+												"value" : [ "{s}" ]
+											}
+, 											{
+												"key" : "t",
+												"value" : [ "{t}" ]
+											}
+, 											{
+												"key" : "tch",
+												"value" : [ "{ch}" ]
+											}
+, 											{
+												"key" : "te",
+												"value" : [ "{ch}" ]
+											}
+, 											{
+												"key" : "th",
+												"value" : [ "{t}{th}" ]
+											}
+, 											{
+												"key" : "ti",
+												"value" : [ "{ch}{sh}" ]
+											}
+, 											{
+												"key" : "tt",
+												"value" : [ "{t}" ]
+											}
+, 											{
+												"key" : "tu",
+												"value" : [ "{ch}" ]
+											}
+, 											{
+												"key" : "u",
+												"value" : [ "{e}{i}{oo}{u}{yü}{w}" ]
+											}
+, 											{
+												"key" : "ue",
+												"value" : [ "{ū}" ]
+											}
+, 											{
+												"key" : "ui",
+												"value" : [ "{i}{ū}" ]
+											}
+, 											{
+												"key" : "ul",
+												"value" : [ "{yü}" ]
+											}
+, 											{
+												"key" : "uoy",
+												"value" : [ "{oi}" ]
+											}
+, 											{
+												"key" : "ur",
+												"value" : [ "{û}{ə}" ]
+											}
+, 											{
+												"key" : "ure",
+												"value" : [ "{üə}" ]
+											}
+, 											{
+												"key" : "uy",
+												"value" : [ "{ī}" ]
+											}
+, 											{
+												"key" : "v",
+												"value" : [ "{v}" ]
+											}
+, 											{
+												"key" : "ve",
+												"value" : [ "{v}" ]
+											}
+, 											{
+												"key" : "w",
+												"value" : [ "{w}" ]
+											}
+, 											{
+												"key" : "wh",
+												"value" : [ "{h}{w}" ]
+											}
+, 											{
+												"key" : "wr",
+												"value" : [ "{r}" ]
+											}
+, 											{
+												"key" : "x",
+												"value" : [ "{z}{k}" ]
+											}
+, 											{
+												"key" : "y",
+												"value" : [ "{y}{ē}{i}{ī}" ]
+											}
+, 											{
+												"key" : "ye",
+												"value" : [ "{ī}" ]
+											}
+, 											{
+												"key" : "you",
+												"value" : [ "{yü}" ]
+											}
+, 											{
+												"key" : "yr",
+												"value" : [ "{û}" ]
+											}
+, 											{
+												"key" : "yu",
+												"value" : [ "{yü}" ]
+											}
+, 											{
+												"key" : "z",
+												"value" : [ "{z}{zh}" ]
+											}
+, 											{
+												"key" : "ze",
+												"value" : [ "{z}" ]
+											}
+, 											{
+												"key" : "zz",
+												"value" : [ "{z}" ]
+											}
+ ]
+									}
+,
 									"id" : "obj-14",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -2636,7 +4482,7 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 92.0, 145.0, 92.0, 22.0 ],
 									"saved_object_attributes" : 									{
-										"embed" : 0
+										"embed" : 1
 									}
 ,
 									"style" : "",
@@ -3713,19 +5559,19 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-26", 0 ],
+					"destination" : [ "obj-17", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-15", 0 ]
+					"source" : [ "obj-15", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-87", 0 ],
+					"destination" : [ "obj-26", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-15", 1 ]
+					"source" : [ "obj-15", 0 ]
 				}
 
 			}
