@@ -80,7 +80,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-7",
@@ -338,7 +337,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 289.0, 79.0, 557.0, 683.0 ],
+						"rect" : [ 201.0, 79.0, 557.0, 683.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -368,6 +367,32 @@
 						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-92",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 138.0, 713.0, 150.0, 33.0 ],
+									"style" : "",
+									"text" : "check between tosymbol and this list..."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-89",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 107.0, 633.0, 39.0, 22.0 ],
+									"style" : "",
+									"text" : "zl.rev"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-88",
 									"maxclass" : "button",
 									"numinlets" : 1,
@@ -394,14 +419,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-82",
-									"linecount" : 6,
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.96666, 672.0, 50.0, 89.0 ],
+									"patching_rect" : [ 107.0, 670.0, 222.0, 35.0 ],
 									"style" : "",
-									"text" : "\"105\" \"105\" \"115\" \"105 115\" \"105\"  "
+									"text" : "  \"105\" \"105\" \"105\" \"105\" \"105\" \"105\" \"105\""
 								}
 
 							}
@@ -428,33 +453,6 @@
 									"patching_rect" : [ 107.0, 571.0, 41.0, 22.0 ],
 									"style" : "",
 									"text" : "zl.join"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-72",
-									"linecount" : 2,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 183.0, 538.700012, 150.0, 33.0 ],
-									"style" : "",
-									"text" : "accumulated list of symbols..."
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"format" : 6,
-									"id" : "obj-70",
-									"maxclass" : "flonum",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "bang" ],
-									"parameter_enable" : 0,
-									"patching_rect" : [ 183.0, 424.0, 50.0, 22.0 ],
-									"style" : ""
 								}
 
 							}
@@ -494,19 +492,6 @@
 									"patching_rect" : [ 228.5, 866.800049, 59.0, 22.0 ],
 									"style" : "",
 									"text" : "tosymbol"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-52",
-									"linecount" : 4,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 140.0, 458.200012, 155.0, 60.0 ],
-									"style" : "",
-									"text" : "add to running list that becomes a blacklist, filter between tosymbol and the trigger"
 								}
 
 							}
@@ -1372,7 +1357,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 350.75, 974.800049, 137.0, 22.0 ],
 									"style" : "",
-									"text" : "\"97 114 101\""
+									"text" : "\"103\""
 								}
 
 							}
@@ -2872,15 +2857,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-70", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-64", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-73", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -2939,7 +2915,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-82", 1 ],
+									"destination" : [ "obj-89", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-78", 0 ]
@@ -3008,6 +2984,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-88", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-82", 1 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-89", 0 ]
 								}
 
 							}
