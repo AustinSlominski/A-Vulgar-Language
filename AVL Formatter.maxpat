@@ -126,9 +126,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 8.666672, 9.0, 162.0, 28.0 ],
+					"patching_rect" : [ 8.666672, 9.0, 133.0, 28.0 ],
 					"style" : "",
-					"text" : "a vulgar language"
+					"text" : "AVL Formatter"
 				}
 
 			}
