@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 35.0, 79.0, 380.0, 682.0 ],
+		"rect" : [ 34.0, 79.0, 382.0, 682.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -230,14 +230,41 @@
 						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
-									"id" : "obj-39",
+									"id" : "obj-45",
+									"linecount" : 5,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 20.0, 788.0, 155.0, 74.0 ],
+									"style" : "",
+									"text" : "it is sending endWord immediately after the first rotation. There is also something weird going on  at the numRot = -1 thing..."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.900537, 0.724439, 0.391741, 1.0 ],
+									"id" : "obj-10",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 76.511108, 500.600098, 68.0, 22.0 ],
+									"patching_rect" : [ 76.511108, 495.799988, 68.0, 22.0 ],
 									"style" : "",
 									"text" : "r newWord"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-28",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 20.0, 745.0, 170.466675, 33.0 ],
+									"style" : "",
+									"text" : "Problem is almost certainly related to the toggle"
 								}
 
 							}
@@ -260,10 +287,10 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"outlettype" : [ "bang", "int" ],
-									"patching_rect" : [ 154.466675, 533.200073, 36.0, 22.0 ],
+									"outlettype" : [ "int", "int" ],
+									"patching_rect" : [ 154.466675, 533.200073, 34.0, 22.0 ],
 									"style" : "",
-									"text" : "t b 0"
+									"text" : "t 0 1"
 								}
 
 							}
@@ -287,34 +314,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 154.466675, 464.600098, 36.0, 22.0 ],
+									"patching_rect" : [ 154.466675, 495.799988, 44.0, 22.0 ],
 									"style" : "",
 									"text" : "sel 0"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-45",
-									"maxclass" : "button",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 181.25, 1222.0, 24.0, 24.0 ],
-									"style" : ""
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-28",
-									"linecount" : 8,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 536.375, 1002.100098, 164.0, 114.0 ],
-									"style" : "",
-									"text" : "It appears to be sending the last character too early. Something to do with the lastRot. Make sure that \"s\" isn't being sent to the zl.group before I get the chance to run through the loop."
 								}
 
 							}
@@ -338,7 +340,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "bang" ],
-									"patching_rect" : [ 143.25, 1141.5, 57.0, 22.0 ],
+									"patching_rect" : [ 143.25, 1141.5, 68.0, 22.0 ],
 									"style" : "",
 									"text" : "onebang"
 								}
@@ -352,7 +354,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 143.25, 1102.500122, 55.0, 22.0 ],
+									"patching_rect" : [ 143.25, 1107.5, 68.0, 22.0 ],
 									"style" : "",
 									"text" : "r lastRot"
 								}
@@ -394,20 +396,6 @@
 									"patching_rect" : [ 420.125, 902.600098, 40.0, 22.0 ],
 									"style" : "",
 									"text" : "t l b"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontface" : 3,
-									"id" : "obj-10",
-									"linecount" : 9,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 31.233339, 756.600098, 148.0, 127.0 ],
-									"style" : "",
-									"text" : "I need to tackle the -1 and 0 catch. \n\nIt seems like sending lastRot is appropriate, but am I doing it too early? Could that be it? Should I just set the counter limit to 0?"
 								}
 
 							}
@@ -459,7 +447,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 20.000002, 500.600098, 22.0, 22.0 ],
+									"patching_rect" : [ 20.000002, 495.799988, 22.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -471,7 +459,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 76.511108, 436.80011, 96.955566, 22.0 ],
+									"patching_rect" : [ 76.511108, 468.0, 96.955566, 22.0 ],
 									"style" : "",
 									"text" : "sel -1"
 								}
@@ -484,7 +472,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 120.977783, 636.199951, 36.0, 22.0 ],
+									"patching_rect" : [ 154.466675, 675.199951, 36.0, 22.0 ],
 									"style" : "",
 									"text" : "sel 0"
 								}
@@ -498,7 +486,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 120.977783, 604.800049, 22.0, 22.0 ],
+									"patching_rect" : [ 154.466675, 643.800049, 22.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -705,7 +693,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 627.875, 901.199951, 64.0, 22.0 ],
+									"patching_rect" : [ 627.875, 895.600098, 64.0, 22.0 ],
 									"style" : "",
 									"text" : "r wordLen"
 								}
@@ -967,7 +955,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 120.977783, 667.400024, 57.0, 22.0 ],
+									"patching_rect" : [ 154.466675, 706.400024, 57.0, 22.0 ],
 									"style" : "",
 									"text" : "s lastRot"
 								}
@@ -994,7 +982,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 76.511108, 407.600098, 29.5, 22.0 ],
+									"patching_rect" : [ 76.511108, 438.799988, 29.5, 22.0 ],
 									"style" : "",
 									"text" : "- 2"
 								}
@@ -1008,7 +996,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 76.511108, 380.200134, 64.0, 22.0 ],
+									"patching_rect" : [ 76.511108, 411.400024, 64.0, 22.0 ],
 									"style" : "",
 									"text" : "r wordLen"
 								}
@@ -1100,7 +1088,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 20.0, 667.400024, 62.0, 22.0 ],
+									"patching_rect" : [ 20.0, 706.400024, 62.0, 22.0 ],
 									"style" : "",
 									"text" : "s numRot"
 								}
@@ -1113,7 +1101,7 @@
 									"numinlets" : 5,
 									"numoutlets" : 4,
 									"outlettype" : [ "int", "", "", "int" ],
-									"patching_rect" : [ 20.0, 573.800049, 170.466675, 22.0 ],
+									"patching_rect" : [ 20.0, 572.800049, 178.466675, 22.0 ],
 									"style" : "",
 									"text" : "counter"
 								}
@@ -2259,12 +2247,19 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-67", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-80", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-103", 1 ],
-									"watchpoint_flags" : 2,
-									"watchpoint_id" : 2
+									"source" : [ "obj-103", 1 ]
 								}
 
 							}
@@ -2737,9 +2732,7 @@
 									"destination" : [ "obj-63", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-32", 0 ],
-									"watchpoint_flags" : 2,
-									"watchpoint_id" : 4
+									"source" : [ "obj-32", 0 ]
 								}
 
 							}
@@ -2757,9 +2750,7 @@
 									"destination" : [ "obj-43", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-33", 2 ],
-									"watchpoint_flags" : 2,
-									"watchpoint_id" : 3
+									"source" : [ "obj-33", 2 ]
 								}
 
 							}
@@ -2792,15 +2783,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-67", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-39", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-141", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -2815,7 +2797,9 @@
 									"destination" : [ "obj-72", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-40", 0 ]
+									"source" : [ "obj-40", 0 ],
+									"watchpoint_flags" : 2,
+									"watchpoint_id" : 2
 								}
 
 							}
@@ -3122,7 +3106,16 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-72", 0 ],
+									"destination" : [ "obj-33", 2 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-66", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-43", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-66", 0 ]
@@ -3263,20 +3256,7 @@
 									"destination" : [ "obj-41", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-78", 0 ],
-									"watchpoint_flags" : 2,
-									"watchpoint_id" : 5
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-45", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-78", 1 ],
-									"watchpoint_flags" : 2,
-									"watchpoint_id" : 6
+									"source" : [ "obj-78", 0 ]
 								}
 
 							}
@@ -3391,15 +3371,6 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-66", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-9", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-67", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-9", 0 ]

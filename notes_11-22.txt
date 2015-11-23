@@ -21,3 +21,72 @@ Another day and it's not finished. Learning still I guess.  Maybe I should reall
 
 Should matches begin to be found immediately after receiving the word? (WELL THAT WAS THE ANSWER, got it)
 
+Here is what I have now:
+********** New errors occur around the end of 4 or the beginning of 5. ************
+{
+	"0" : 	{
+		"0" : "s",
+		"1" : "u",
+		"2" : [ "c", "ch" ],
+		"3" : "h"
+	}
+,
+	"1" : 	{
+		"0" : [ "i", "is" ],
+		"1" : "s"
+	}
+,
+	"2" : 	{
+		"0" : [ "t", "th" ],
+		"1" : "h",
+		"2" : "e"
+	}
+,
+	"3" : 	{
+		"0" : "b",
+		"1" : "e",
+		"2" : "l",
+		"3" : [ "i", "ie" ],
+		"4" : "e",
+		"5" : "f"
+	}
+,
+	"4" : 	{
+		"0" : "i",
+		"1" : "n"
+	}
+,
+	"5" : 	{
+		"0" : "l",
+		"3" : "e"
+	}
+,
+	"6" : 	{
+		"1" : "n"
+	}
+,
+	"7" : 	{
+		"0" : [ "t", "th" ],
+		"1" : "h",
+		"2" : "e"
+	}
+,
+	"8" : 	{
+		"0" : "m",
+		"1" : "o",
+		"2" : [ "s", "st" ],
+		"3" : "t"
+	}
+,
+	"9" : 	{
+		"0" : "p"
+	}
+
+}
+
+I am pretty sure the problem relates to the toggle for lastRot. Try a bang instead of a 0. (nope)
+
+I know it has something to do with lastRot. It is sending the lastRot message on the FIRST rotation of word #5, skipping letters 1 and 2. 
+What is different at the end of word 2 compared to word 4? The conditions need to match...
+
+Resolved. Needed to goto 0 at the next count (on the lower counter)
