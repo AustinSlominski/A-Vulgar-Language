@@ -13,3 +13,11 @@ So now things to be working in order, but the bang sent through to [s endWord] i
 I'm not sending a bang to the onebang gate! I'm sending an int!
 
 (after a word totally complete (including ecils), send bang through endWord gate. *Final*
+
+
+So now I'm starting to think it has something to do with the fundamental order of things... I still don't want to have to move backwards unless I have to.
+
+Another day and it's not finished. Learning still I guess.  Maybe I should really rethink the order of things in the patch. 
+
+Should matches begin to be found immediately after receiving the word? (WELL THAT WAS THE ANSWER, got it)
+
