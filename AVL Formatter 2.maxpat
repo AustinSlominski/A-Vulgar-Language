@@ -230,41 +230,15 @@
 						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
-									"id" : "obj-45",
-									"linecount" : 5,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 20.0, 788.0, 155.0, 74.0 ],
-									"style" : "",
-									"text" : "it is sending endWord immediately after the first rotation. There is also something weird going on  at the numRot = -1 thing..."
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"color" : [ 0.900537, 0.724439, 0.391741, 1.0 ],
 									"id" : "obj-10",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 76.511108, 495.799988, 68.0, 22.0 ],
+									"patching_rect" : [ 76.511108, 502.599976, 68.0, 22.0 ],
 									"style" : "",
 									"text" : "r newWord"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-28",
-									"linecount" : 2,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 20.0, 745.0, 170.466675, 33.0 ],
-									"style" : "",
-									"text" : "Problem is almost certainly related to the toggle"
 								}
 
 							}
@@ -275,7 +249,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 76.511108, 533.200073, 24.0, 22.0 ],
+									"patching_rect" : [ 76.511108, 533.000061, 24.0, 22.0 ],
 									"style" : "",
 									"text" : "t 0"
 								}
@@ -288,7 +262,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "int" ],
-									"patching_rect" : [ 154.466675, 533.200073, 34.0, 22.0 ],
+									"patching_rect" : [ 154.466675, 533.000061, 34.0, 22.0 ],
 									"style" : "",
 									"text" : "t 0 1"
 								}
@@ -314,7 +288,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 154.466675, 495.799988, 44.0, 22.0 ],
+									"patching_rect" : [ 154.466675, 502.599976, 44.0, 22.0 ],
 									"style" : "",
 									"text" : "sel 0"
 								}
@@ -433,7 +407,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 20.000002, 533.200073, 36.0, 22.0 ],
+									"patching_rect" : [ 20.0, 502.599976, 36.0, 22.0 ],
 									"style" : "",
 									"text" : "sel 1"
 								}
@@ -447,7 +421,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 20.000002, 495.799988, 22.0, 22.0 ],
+									"patching_rect" : [ 20.0, 458.19989, 22.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -459,7 +433,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 76.511108, 468.0, 96.955566, 22.0 ],
+									"patching_rect" : [ 76.511108, 429.799988, 96.955566, 22.0 ],
 									"style" : "",
 									"text" : "sel -1"
 								}
@@ -982,7 +956,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 76.511108, 438.799988, 29.5, 22.0 ],
+									"patching_rect" : [ 76.511108, 402.799988, 29.5, 22.0 ],
 									"style" : "",
 									"text" : "- 2"
 								}
@@ -996,7 +970,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 76.511108, 411.400024, 64.0, 22.0 ],
+									"patching_rect" : [ 76.511108, 373.200012, 64.0, 22.0 ],
 									"style" : "",
 									"text" : "r wordLen"
 								}
@@ -1474,7 +1448,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 219.0, 288.400024, 59.0, 22.0 ],
+									"patching_rect" : [ 219.0, 306.0, 59.0, 22.0 ],
 									"style" : "",
 									"text" : "tosymbol"
 								}
@@ -2313,7 +2287,7 @@
 									"destination" : [ "obj-33", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 29.500002, 558.200073, 29.5, 558.200073 ],
+									"midpoints" : [ 29.5, 558.200073, 29.5, 558.200073 ],
 									"source" : [ "obj-11", 0 ]
 								}
 
@@ -2631,6 +2605,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-227", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-66", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-23", 0 ]
 								}
 
 							}
