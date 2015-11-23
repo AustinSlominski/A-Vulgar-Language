@@ -1,0 +1,15 @@
+So the problem seems to be coming from the fact that I am pushing my ecils'ed string through BEFORE numRot is being called.
+
+So first, a word comes in that is 2 letters long:
+
+first send word length (2)
+receive, subtract 2 (0)
+send lastRot bang
+lastRot opens up endWord gate
+endWord really is triggered last. LastRot is definitely referring to triggering the last automated, grapheme loop. 
+SO IMMEDIATELY 2 LETTER WORDS HAVE TO TRIGGER LASTROT IMMEDIATELY (now corrected)
+I have to assure the first letter has a match found (add watchpoint on the match... watch for "i")
+So now things to be working in order, but the bang sent through to [s endWord] is being stopped (was the gate banged open?)
+I'm not sending a bang to the onebang gate! I'm sending an int!
+
+(after a word totally complete (including ecils), send bang through endWord gate. *Final*
