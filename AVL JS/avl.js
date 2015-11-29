@@ -1,6 +1,6 @@
 
-inlets = 1;
-outlets = 1;
+inlets = 2;
+outlets = 3;
 
 
 function post_info(dictname, keys)
