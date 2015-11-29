@@ -1,3 +1,0 @@
-1, bank;
-2, phone;
-3, bean;
