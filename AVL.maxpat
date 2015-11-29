@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 484.0, 79.0, 640.0, 480.0 ],
+		"rect" : [ 44.0, 80.0, 739.0, 663.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,11 +38,102 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-26",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 129.666672, 157.5, 24.0, 24.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-24",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 129.666672, 193.0, 50.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "avl.js",
+						"parameter_enable" : 0
+					}
+,
+					"style" : "",
+					"text" : "js avl.js"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 129.666672, 235.0, 34.0, 22.0 ],
+					"style" : "",
+					"text" : "print"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 0.447059, 0.823529, 0.772549, 1.0 ],
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 4,
+					"outlettype" : [ "dictionary", "", "", "" ],
+					"patching_rect" : [ 129.666672, 115.0, 86.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"embed" : 0,
+						"parameter_enable" : 0
+					}
+,
+					"style" : "",
+					"text" : "dict wordBank"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 129.666672, 82.0, 61.0, 22.0 ],
+					"style" : "",
+					"text" : "import $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"autopopulate" : 1,
+					"fontsize" : 16.0,
+					"id" : "obj-1",
+					"items" : "11-24-15_breton_formatted.json",
+					"maxclass" : "umenu",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 8.666672, 50.0, 261.0, 26.0 ],
+					"prefix" : "Macintosh HD:/Users/austinslominski/Documents/Max 7/Library/A Vulgar Language/Formatted Text/",
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-20",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 255.0, 213.0, 131.0, 20.0 ],
+					"patching_rect" : [ 253.0, 438.0, 131.0, 20.0 ],
 					"style" : "",
 					"text" : "dump into tographeme"
 				}
@@ -55,7 +146,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 100.666672, 186.333313, 50.0, 22.0 ],
+					"patching_rect" : [ 98.666672, 411.333313, 50.0, 22.0 ],
 					"style" : "",
 					"text" : "{f}{v}"
 				}
@@ -68,7 +159,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 305.666656, 152.0, 24.0, 24.0 ],
+					"patching_rect" : [ 303.666656, 377.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -80,7 +171,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 259.333313, 152.0, 43.0, 22.0 ],
+					"patching_rect" : [ 257.333313, 377.0, 43.0, 22.0 ],
 					"style" : "",
 					"text" : "length"
 				}
@@ -402,7 +493,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 259.333313, 189.0, 111.666687, 22.0 ],
+					"patching_rect" : [ 257.333313, 414.0, 111.666687, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1243,7 +1334,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 100.666672, 152.333313, 81.0, 22.0 ],
+					"patching_rect" : [ 98.666672, 377.333313, 81.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1275,10 +1366,37 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-37", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-24", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-26", 0 ]
 				}
 
 			}
@@ -1300,10 +1418,25 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "english_graphemes.txt",
-				"bootpath" : "~/Documents/Max 7/Library/A Vulgar Language/Grapheme Banks",
+				"name" : "graphemes.txt",
+				"bootpath" : "~/Documents/Max 7/Library/A Vulgar Language/Grapheme Banks/old",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "avl.js",
+				"bootpath" : "~/Documents/Max 7/Library/A Vulgar Language/AVL JS",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
