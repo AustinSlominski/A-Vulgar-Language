@@ -5,7 +5,7 @@
 			"major" : 7,
 			"minor" : 0,
 			"revision" : 6,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
@@ -45,7 +45,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 194.0, 249.5, 316.666687, 163.0 ],
+					"patching_rect" : [ 194.0, 227.5, 320.0, 163.0 ],
 					"style" : "",
 					"text" : "The javascript file should input:\n\n- control data for generated words\n- number representing the amount of \"spread\"\n\nand should output: \n\n- chosen phonemes (streaming)\n- chosen word (out when done)\n- bang when word is done\n"
 				}
