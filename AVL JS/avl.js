@@ -38,21 +38,38 @@ function select(originWord)
 
 function build(originWord)
 {
-	//spread should actually relate to the percentage of wLen
 	for(var i = originWord-spread; i < originWord+spread; i++){
 		tmpW = wB.get(i);
+		post("tmpW index : " + i);
+	
 		for(var j = 0; j<tmpW.getkeys().length;j++){
 			tmpG = tmpW.get(j);
-			if(tmpG.length > 1){ //if there are more options...
+			
+			if(tmpG.length > 1){
 				tmpG = tmpG[Math.floor(Math.random()*tmpG.length)];
 			}
-			//PUSH THE NEXT, NOT THE CURRENT
+			
+			post("tmpG : " + tmpG);
+			
 			if(tmpG == genWord[genWord.length -1]){
-				genWord.push(tmpW[j+1]);//The next?
-				select(i);
+				post("Match found");
+				post();
+				nextG = tmpW.get(j+1);
+				if(nextG.length > 1){
+					nextG = nextG[Math.floor(Math.random()*nextG.length)];
+				}
+				genWord.push(nextG);
+				post("Next Grapheme: " + genWord[genWord.length -1]);
+				
+				if(i==originWord){
+					build(i);
+				}else{
+					select(i);		
+				}
 				break;
 			}
 		}
+		post();
 	}
 	endWord();
 }
@@ -60,6 +77,7 @@ function build(originWord)
 function endWord() 
 {
 	post("done");
+	post();
 }
 
 function toPhoneme(grapheme)
@@ -72,6 +90,7 @@ function toPhoneme(grapheme)
 	
 	post("Grapheme: " + grapheme);
 	post("Phoneme: " + tmpP);
+	post();
 }
 
 function bang()

@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 511.0, 683.0 ],
+		"rect" : [ 34.0, 79.0, 602.0, 683.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,19 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-13",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 267.0, 224.0, 150.0, 47.0 ],
+					"style" : "",
+					"text" : "Spread should be the percentage of the total wLen"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"format" : 6,
 					"id" : "obj-22",
 					"maxclass" : "flonum",
@@ -45,7 +58,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 315.666687, 395.0, 50.0, 22.0 ],
+					"patching_rect" : [ 367.0, 410.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -57,7 +70,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 315.666687, 424.5, 107.0, 22.0 ],
+					"patching_rect" : [ 367.0, 439.5, 107.0, 22.0 ],
 					"style" : "",
 					"text" : "setprop spread $1"
 				}
@@ -70,7 +83,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 315.666687, 373.0, 50.0, 20.0 ],
+					"patching_rect" : [ 367.0, 388.0, 50.0, 20.0 ],
 					"style" : "",
 					"text" : "Spread"
 				}
@@ -106,13 +119,13 @@
 					"fontface" : 3,
 					"fontsize" : 14.0,
 					"id" : "obj-14",
-					"linecount" : 7,
+					"linecount" : 10,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 8.666672, 216.5, 721.0, 116.0 ],
+					"patching_rect" : [ 20.666672, 183.5, 244.0, 163.0 ],
 					"style" : "",
-					"text" : "Input:\n\n    spread, speed, (phoneme_selection later)\n\nOutput:\n\n    Stream (grapheme), Stream (phoneme), built word (previous, grapheme), built word (previous, phoneme)"
+					"text" : "Input:\n    spread, \n    speed, \n    (phoneme_selection later)\n\nOutput:\n    Stream (grapheme), \n    Stream (phoneme), \n    built word (previous, grapheme),\n    built word (previous, phoneme)"
 				}
 
 			}
@@ -125,7 +138,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 354.666687, 61.0, 261.0, 28.0 ],
+					"patching_rect" : [ 298.666687, 61.0, 261.0, 28.0 ],
 					"style" : "",
 					"text" : "Formatted GraphPhon File"
 				}
@@ -154,7 +167,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 354.666687, 156.0, 94.0, 22.0 ],
+					"patching_rect" : [ 298.666687, 156.0, 94.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -172,7 +185,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 354.666687, 125.0, 61.0, 22.0 ],
+					"patching_rect" : [ 298.666687, 125.0, 61.0, 22.0 ],
 					"style" : "",
 					"text" : "import $1"
 				}
@@ -189,7 +202,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 354.666687, 91.0, 286.0, 26.0 ],
+					"patching_rect" : [ 298.666687, 91.0, 286.0, 26.0 ],
 					"prefix" : "Macintosh HD:/Users/austinslominski/Documents/Max 7/Library/A Vulgar Language/Grapheme Banks/Formatted/",
 					"style" : ""
 				}
@@ -360,7 +373,7 @@
 					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 497.666687, 119.666664, 415.0, 119.666664, 415.0, 119.0, 364.166687, 119.0 ],
+					"midpoints" : [ 441.666687, 119.666664, 359.0, 119.666664, 359.0, 119.0, 308.166687, 119.0 ],
 					"source" : [ "obj-3", 1 ]
 				}
 
