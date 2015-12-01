@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 389.0, 683.0 ],
+		"rect" : [ 34.0, 79.0, 511.0, 683.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -110,7 +110,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 8.666672, 215.5, 721.0, 116.0 ],
+					"patching_rect" : [ 8.666672, 216.5, 721.0, 116.0 ],
 					"style" : "",
 					"text" : "Input:\n\n    spread, speed, (phoneme_selection later)\n\nOutput:\n\n    Stream (grapheme), Stream (phoneme), built word (previous, grapheme), built word (previous, phoneme)"
 				}
