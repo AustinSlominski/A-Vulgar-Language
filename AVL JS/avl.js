@@ -23,11 +23,11 @@ function startWord()
 	
 	post("WordID: " + wInd);
 	
-	if(tmpWord.getKeys().length > 1){
+	if(tmpWord.getkeys().length > 1){
 		toPhoneme(tmpG);	
 		build(wInd);
 	}else{
-		end();
+		endWord();
 	} 
 }
 
@@ -35,13 +35,27 @@ function build(originWord)
 {
 	//spread should actually relate to the percentage of wLen
 	for(var i = originWord-spread; i < originWord+spread; i++){
-		
+		//i refers to the possible word from the bank... pick each and loop through it
+		tmpW = wB.get(i);
+		for(var j = 0; j<tmpW.getkeys().length;j++){
+			tmpG = tmpW.get(j);
+			if(tmpG.length > 1){
+				tmpG = tmpG[Math.floor(Math.random()*tmpG.length)];
+			}
+			
+			post(tmpG);
+			if(tmpG == currWord[currWord.length -1]){
+				post("found");
+			}
+		}
 	}
+	
+	endWord();
 }
 
 function endWord() 
 {
-	
+	post("done");
 }
 
 function toPhoneme(grapheme)

@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 1212.0, 683.0 ],
+		"rect" : [ 34.0, 79.0, 389.0, 683.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 593.0, 395.0, 50.0, 22.0 ],
+					"patching_rect" : [ 315.666687, 395.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -57,7 +57,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 593.0, 424.5, 107.0, 22.0 ],
+					"patching_rect" : [ 315.666687, 424.5, 107.0, 22.0 ],
 					"style" : "",
 					"text" : "setprop spread $1"
 				}
@@ -70,7 +70,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 593.0, 373.0, 50.0, 20.0 ],
+					"patching_rect" : [ 315.666687, 373.0, 50.0, 20.0 ],
 					"style" : "",
 					"text" : "Spread"
 				}
@@ -83,7 +83,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 144.0, 525.0, 69.0, 22.0 ],
+					"patching_rect" : [ 6.0, 540.0, 69.0, 22.0 ],
 					"style" : "",
 					"text" : "s u c h"
 				}
@@ -96,7 +96,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 251.0, 525.0, 95.0, 22.0 ],
+					"patching_rect" : [ 113.0, 540.0, 95.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -202,7 +202,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 194.0, 424.5, 24.0, 24.0 ],
+					"patching_rect" : [ 56.0, 439.5, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -215,7 +215,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 194.0, 460.0, 418.0, 22.0 ],
+					"patching_rect" : [ 56.0, 475.0, 418.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "avl.js",
 						"parameter_enable" : 0
