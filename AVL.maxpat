@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 602.0, 683.0 ],
+		"rect" : [ 34.0, 79.0, 793.0, 683.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,19 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-12",
+					"linecount" : 15,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 436.5, 161.0, 220.0, 208.0 ],
+					"style" : "",
+					"text" : "1. include rule where the second grapheme has to logically follow the first? \n\n2. I need a catch in the case of a two letter grapheme. The next character CAN'T be the same. Set a bool, and then a continue in the case of it running into the last character of the last grapheme?\n\n3. if the match that is found is the last in the word, AND that makes it only a one character word, then continue (MIGHT BE SOLVED BY ISSUE 1)"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-15",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -50,22 +63,11 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-13",
-					"linecount" : 3,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 267.0, 224.0, 150.0, 47.0 ],
-					"style" : "",
-					"text" : "Spread should be the percentage of the total wLen"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"format" : 6,
 					"id" : "obj-22",
 					"maxclass" : "flonum",
+					"maximum" : 10.0,
+					"minimum" : 0.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
