@@ -16,20 +16,20 @@ function select(originWord)
 	}else{
 		wInd = originWord;
 	}
-	
+
 	tmpW = wB.get(wInd);
 	tmpG = tmpW.get(0);
 	
 	if(tmpG.length > 1){
+		//Select random, if there are options
 		tmpG = tmpG[Math.floor(Math.random()*tmpG.length)];
 	}
 	
 	genWord.push(tmpG);
-	
-	post("WordID: " + wInd);
+	toPhoneme(tmpG);
 	
 	if(tmpW.getkeys().length > 1){
-		toPhoneme(tmpG);	
+		//if word is longer than one character, build
 		build(wInd);
 	}else{
 		endWord();
@@ -38,44 +38,58 @@ function select(originWord)
 
 function build(originWord)
 {
-	for(var i = originWord-spread; i < originWord+spread; i++){
-		tmpW = wB.get(i);
-		post("tmpW index : " + i);
+	//takes in an index, and that serves as the center of the search.
+	//spread (will) refer to the percentage of the text to search
 	
-		for(var j = 0; j<tmpW.getkeys().length;j++){
+	wordsearch: for(var i=originWord-spread; i<originWord+spread; i++){
+		if(i==originWord){ continue; }
+			
+		tmpW = wB.get(i);
+		
+		graphsearch: for(var j=0; j<tmpW.getkeys().length; j++){
+			//check all graphemes in the temp word
 			tmpG = tmpW.get(j);
 			
 			if(tmpG.length > 1){
+				//Select random, if there are options
 				tmpG = tmpG[Math.floor(Math.random()*tmpG.length)];
 			}
-			
-			post("tmpG : " + tmpG);
-			
-			if(tmpG == genWord[genWord.length -1]){
-				post("Match found");
-				post();
+
+			if(tmpG == genWord[genWord.length-1]){
+				//if the grapheme matches, then grab the next in the sequence
 				nextG = tmpW.get(j+1);
+				
+				if(nextG == null){
+					//if that was the last grapheme in the word, endWord & break
+					//the central terminating break
+					post("Is this being called?");
+					endWord();
+					break wordsearch;
+				}
+				
 				if(nextG.length > 1){
+					//Select random, if there are options
 					nextG = nextG[Math.floor(Math.random()*nextG.length)];
 				}
-				genWord.push(nextG);
-				post("Next Grapheme: " + genWord[genWord.length -1]);
 				
-				if(i==originWord){
-					build(i);
-				}else{
-					select(i);		
-				}
-				break;
+				genWord.push(nextG);
+				toPhoneme(nextG);
 			}
 		}
-		post();
-	}
-	endWord();
+	}	
+		
+		//	build(i);
+		//}else{
+		//	select(i);		
+		//}
 }
 
 function endWord() 
 {
+	for(var i=0; i<genWord.length;i++){
+		//this will work when speed is introduced. Outputting grapheme stream
+		outlet(0,genWord[i]);
+	}
 	post("done");
 	post();
 }
@@ -87,13 +101,11 @@ function toPhoneme(grapheme)
 	if(tmpP.length > 1){
 		tmpP = tmpP[Math.floor(Math.random()*tmpP.length)]
 	}
-	
-	post("Grapheme: " + grapheme);
-	post("Phoneme: " + tmpP);
-	post();
 }
 
 function bang()
 {
+	genWord = [];
+	
 	select("start");
 }
