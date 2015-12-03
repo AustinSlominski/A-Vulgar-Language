@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 793.0, 683.0 ],
+		"rect" : [ 34.0, 79.0, 551.0, 683.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,12 +38,24 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-13",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 329.0, 491.0, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "spread is broken"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-12",
 					"linecount" : 15,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 436.5, 161.0, 220.0, 208.0 ],
+					"patching_rect" : [ 325.5, 213.0, 223.0, 208.0 ],
 					"style" : "",
 					"text" : "1. include rule where the second grapheme has to logically follow the first? \n\n2. I need a catch in the case of a two letter grapheme. The next character CAN'T be the same. Set a bool, and then a continue in the case of it running into the last character of the last grapheme?\n\n3. if the match that is found is the last in the word, AND that makes it only a one character word, then continue (MIGHT BE SOLVED BY ISSUE 1)"
 				}
@@ -55,7 +67,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 56.0, 574.0, 93.0, 22.0 ],
+					"patching_rect" : [ 20.666672, 409.0, 93.0, 22.0 ],
 					"style" : "",
 					"text" : "print phonemes"
 				}
@@ -72,7 +84,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 367.0, 410.0, 50.0, 22.0 ],
+					"patching_rect" : [ 194.666672, 306.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -84,7 +96,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 367.0, 439.5, 107.0, 22.0 ],
+					"patching_rect" : [ 194.666672, 335.5, 107.0, 22.0 ],
 					"style" : "",
 					"text" : "setprop spread $1"
 				}
@@ -97,7 +109,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 367.0, 388.0, 50.0, 20.0 ],
+					"patching_rect" : [ 194.666672, 284.0, 50.0, 20.0 ],
 					"style" : "",
 					"text" : "Spread"
 				}
@@ -110,7 +122,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 113.0, 540.0, 95.0, 22.0 ],
+					"patching_rect" : [ 118.666672, 409.0, 95.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -124,7 +136,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.666672, 183.5, 245.0, 163.0 ],
+					"patching_rect" : [ 36.666672, 462.5, 245.0, 163.0 ],
 					"style" : "",
 					"text" : "Input:\n    spread, \n    speed, \n    (phoneme_selection later)\n\nOutput:\n    Stream (grapheme), \n    Stream (phoneme), \n    built word (previous, grapheme),\n    built word (previous, phoneme)"
 				}
@@ -139,7 +151,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 298.666687, 61.0, 261.0, 28.0 ],
+					"patching_rect" : [ 20.666672, 193.0, 261.0, 28.0 ],
 					"style" : "",
 					"text" : "Formatted GraphPhon File"
 				}
@@ -168,7 +180,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 298.666687, 156.0, 94.0, 22.0 ],
+					"patching_rect" : [ 20.666672, 288.0, 94.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -186,7 +198,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 298.666687, 125.0, 61.0, 22.0 ],
+					"patching_rect" : [ 20.666672, 257.0, 61.0, 22.0 ],
 					"style" : "",
 					"text" : "import $1"
 				}
@@ -203,7 +215,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 298.666687, 91.0, 286.0, 26.0 ],
+					"patching_rect" : [ 20.666672, 223.0, 286.0, 26.0 ],
 					"prefix" : "Macintosh HD:/Users/austinslominski/Documents/Max 7/Library/A Vulgar Language/Grapheme Banks/Formatted/",
 					"style" : ""
 				}
@@ -216,7 +228,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 56.0, 439.5, 24.0, 24.0 ],
+					"patching_rect" : [ 20.666672, 334.5, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -229,7 +241,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 56.0, 475.0, 418.0, 22.0 ],
+					"patching_rect" : [ 20.666672, 370.0, 193.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "avl.js",
 						"parameter_enable" : 0
@@ -374,7 +386,7 @@
 					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 441.666687, 119.666664, 359.0, 119.666664, 359.0, 119.0, 308.166687, 119.0 ],
+					"midpoints" : [ 163.666672, 251.666656, 80.999985, 251.666656, 80.999985, 251.0, 30.166672, 251.0 ],
 					"source" : [ "obj-3", 1 ]
 				}
 
