@@ -110,8 +110,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 118.666672, 409.0, 95.0, 22.0 ],
-					"style" : ""
+					"patching_rect" : [ 118.666672, 409.0, 154.0, 22.0 ],
+					"style" : "",
+					"text" : "auuimsttoumurshhaceene"
 				}
 
 			}
@@ -124,7 +125,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 36.666672, 462.5, 245.0, 163.0 ],
+					"patching_rect" : [ 303.5, 465.5, 245.0, 163.0 ],
 					"style" : "",
 					"text" : "Input:\n    spread, \n    speed, \n    (phoneme_selection later)\n\nOutput:\n    Stream (grapheme), \n    Stream (phoneme), \n    built word (previous, grapheme),\n    built word (previous, phoneme)"
 				}
@@ -356,7 +357,7 @@
 					"destination" : [ "obj-7", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-24", 1 ]
+					"source" : [ "obj-24", 2 ]
 				}
 
 			}

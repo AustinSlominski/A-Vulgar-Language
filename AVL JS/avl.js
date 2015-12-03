@@ -26,7 +26,7 @@ function select(originWord)
 	post("First Grapheme: " + tmpG);
 	post();
 	genWord.push(tmpG);
-	toPhoneme(tmpG);
+	toPhoneme(tmpG); 
 	
 	if(tmpW.getkeys().length > 1){
 		build(wInd);
@@ -44,30 +44,36 @@ function build(originWord)
 	}else if(originWord+tmpSpread > wLen){
 		hiSpread = wLen;
 	}else{
-		loSpread = originWord-spreadP;
-		hiSpread = originWord+spreadP;
+		loSpread = originWord-tmpSpread;
+		hiSpread = originWord+tmpSpread;
 	}
 	
-	wordsearch: for(var i=loSpread; i<hiSpread; i++){
+	wordsearch: 
+	for(var i=loSpread; i<hiSpread; i++){
 		if(i==originWord){ continue; }
 		
 		tmpW = wB.get(i);
-
-		graphsearch: for(var j=0; j<tmpW.getkeys().length; j++){
+			
+		graphsearch: 
+		for(var j=0; j<tmpW.getkeys().length; j++){
+			
+			if(genWord.length == 1)
+				j=0;
+			
 			tmpG = tmpW.get(j);
 			
-			if(tmpG.length > 1){
+			if(tmpG == null)
+				break graphsearch;
+			
+			if(tmpG.length > 1)
 				tmpG = tmpG[Math.floor(Math.random()*tmpG.length)];
-			}
 
 			if(tmpG === genWord[genWord.length-1]){
 				post("tmpW Index: "+i);	
 				nextG = tmpW.get(j+1);
 				
+				//BREAK AT END OF SEQUENCE (not crazy about its effect)
 				if(nextG == null){
-					if(tmpG == genWord.length == 1){
-						
-					}
 					endWord();
 					break wordsearch;
 				}
@@ -83,6 +89,9 @@ function build(originWord)
 				toPhoneme(nextG);
 				break graphsearch;
 			}
+			
+			if(genWord.length == 1)
+				break graphsearch;
 		}
 	}	
 }
@@ -91,6 +100,9 @@ function endWord()
 {
 	for(var i=0; i<genWord.length;i++){
 		outlet(0,genWord[i]);
+		
+		formedWord = formedWord.concat(genWord[i]);
+		outlet(3,formedWord);
 	}
 	post("done");
 	post();
@@ -107,6 +119,7 @@ function toPhoneme(grapheme)
 
 function bang()
 {
-	genWord = [];	
+	genWord = [];
+	formedWord = "";
 	select("start");
 }
