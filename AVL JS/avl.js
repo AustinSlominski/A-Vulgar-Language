@@ -37,13 +37,22 @@ function select(originWord)
 
 function build(originWord)
 {
-	spreadP = Math.floor(wLen*spread/10.0);// spread is broken?
-	post("spread : " + spreadP);
-	wordsearch: for(var i=originWord-spreadP; i<originWord+spreadP; i++){
+	tmpSpread = Math.floor(wLen*spread/10.0);
+	
+	if(originWord-tmpSpread < 0){
+		loSpread = 0;
+	}else if(originWord+tmpSpread > wLen){
+		hiSpread = wLen;
+	}else{
+		loSpread = originWord-spreadP;
+		hiSpread = originWord+spreadP;
+	}
+	
+	wordsearch: for(var i=loSpread; i<hiSpread; i++){
 		if(i==originWord){ continue; }
 		
 		tmpW = wB.get(i);
-		//sometimes the spread will go beyond the length, resulting in a null
+
 		graphsearch: for(var j=0; j<tmpW.getkeys().length; j++){
 			tmpG = tmpW.get(j);
 			
@@ -66,8 +75,10 @@ function build(originWord)
 				if(nextG.length > 1){
 					nextG = nextG[Math.floor(Math.random()*nextG.length)];
 				}
+				
 				post("nextGrapheme: " + nextG);
 				post();
+				
 				genWord.push(nextG);
 				toPhoneme(nextG);
 				break graphsearch;
