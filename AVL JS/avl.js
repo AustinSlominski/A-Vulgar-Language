@@ -7,7 +7,7 @@ var wLen = wB.getkeys().length;
 var pB = new Dict("graph-phon");
 var pLen = pB.getkeys().length;
 
-var spread;
+
 function select(originWord)
 {
 	if(originWord == "start"){
@@ -37,9 +37,9 @@ function select(originWord)
 
 function build(originWord)
 {
-	spread = Math.floor(wLen*(spread/10))// spread is broken?
-	post("spread : " + spread);
-	wordsearch: for(var i=originWord-spread; i<originWord+spread; i++){
+	spreadP = Math.floor(wLen*spread/10.0);// spread is broken?
+	post("spread : " + spreadP);
+	wordsearch: for(var i=originWord-spreadP; i<originWord+spreadP; i++){
 		if(i==originWord){ continue; }
 		
 		tmpW = wB.get(i);

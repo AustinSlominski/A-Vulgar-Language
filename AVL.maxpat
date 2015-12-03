@@ -38,18 +38,6 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-13",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 329.0, 491.0, 150.0, 20.0 ],
-					"style" : "",
-					"text" : "spread is broken"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-12",
 					"linecount" : 15,
 					"maxclass" : "comment",
