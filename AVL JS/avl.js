@@ -7,6 +7,8 @@ var wLen = wB.getkeys().length;
 var pB = new Dict("graph-phon");
 var pLen = pB.getkeys().length;
 
+var genWord,genPhon;
+var formedWord,formedPhon;
 
 function select(originWord)
 {
@@ -17,14 +19,17 @@ function select(originWord)
 	}
 
 	tmpW = wB.get(wInd);
-	post("Origin: " + wInd);
 	tmpG = tmpW.get(0);
 	
 	if(tmpG.length > 1){
 		tmpG = tmpG[Math.floor(Math.random()*tmpG.length)];
 	}
+	
+	//DEBUGGING
+	post("Origin: " + wInd);
 	post("First Grapheme: " + tmpG);
 	post();
+	
 	genWord.push(tmpG);
 	toPhoneme(tmpG); 
 	
@@ -53,7 +58,10 @@ function build(originWord)
 		if(i==originWord){ continue; }
 		
 		tmpW = wB.get(i);
-			
+		
+		if(tmpW.getkeys().length == 1)
+		continue wordsearch;
+	
 		graphsearch: 
 		for(var j=0; j<tmpW.getkeys().length; j++){
 			
@@ -69,10 +77,8 @@ function build(originWord)
 				tmpG = tmpG[Math.floor(Math.random()*tmpG.length)];
 
 			if(tmpG === genWord[genWord.length-1]){
-				post("tmpW Index: "+i);	
 				nextG = tmpW.get(j+1);
 				
-				//BREAK AT END OF SEQUENCE (not crazy about its effect)
 				if(nextG == null){
 					endWord();
 					break wordsearch;
@@ -82,7 +88,9 @@ function build(originWord)
 					nextG = nextG[Math.floor(Math.random()*nextG.length)];
 				}
 				
-				post("nextGrapheme: " + nextG);
+				//DEBUGGING
+				post("Next Origin: "+i);	
+				post("Next Grapheme: " + nextG);
 				post();
 				
 				genWord.push(nextG);
@@ -98,12 +106,19 @@ function build(originWord)
 
 function endWord() 
 {
-	for(var i=0; i<genWord.length;i++){
+	for(var i=0; i<genWord.length; i++){
 		outlet(0,genWord[i]);
-		
 		formedWord = formedWord.concat(genWord[i]);
-		outlet(3,formedWord);
 	}
+	
+	for(var i=0; i<genPhon.length; i++){
+		outlet(1,genPhon[i]);
+		formedPhon = formedPhon.concat(genPhon[i]);
+	}
+	
+	outlet(2,formedWord);
+	outlet(3,formedPhon);
+	//DEBUGGING
 	post("done");
 	post();
 }
@@ -115,11 +130,16 @@ function toPhoneme(grapheme)
 	if(tmpP.length > 1){
 		tmpP = tmpP[Math.floor(Math.random()*tmpP.length)]
 	}
+	
+	genPhon.push(tmpP);
 }
 
 function bang()
 {
 	genWord = [];
+	genPhon = [];
 	formedWord = "";
+	formedPhon = "";
+	
 	select("start");
 }

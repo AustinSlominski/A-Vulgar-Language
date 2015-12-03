@@ -38,6 +38,30 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-18",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 18.666672, 491.0, 101.0, 22.0 ],
+					"style" : "",
+					"text" : "print formedphon"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 20.666672, 451.0, 101.0, 22.0 ],
+					"style" : "",
+					"text" : "print formedword"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-12",
 					"linecount" : 15,
 					"maxclass" : "comment",
@@ -55,9 +79,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.666672, 409.0, 93.0, 22.0 ],
+					"patching_rect" : [ 20.666672, 409.0, 97.0, 22.0 ],
 					"style" : "",
-					"text" : "print phonemes"
+					"text" : "print graphemes"
 				}
 
 			}
@@ -100,19 +124,6 @@
 					"patching_rect" : [ 194.666672, 284.0, 50.0, 20.0 ],
 					"style" : "",
 					"text" : "Spread"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 118.666672, 409.0, 154.0, 22.0 ],
-					"style" : "",
-					"text" : "auuimsttoumurshhaceene"
 				}
 
 			}
@@ -354,10 +365,19 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 1 ],
+					"destination" : [ "obj-16", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-24", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 3 ]
 				}
 
 			}
