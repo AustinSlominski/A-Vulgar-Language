@@ -60,7 +60,7 @@ function build(originWord)
 		tmpW = wB.get(i);
 		
 		if(tmpW.getkeys().length == 1)
-		continue wordsearch;
+			continue wordsearch;
 	
 		graphsearch: 
 		for(var j=0; j<tmpW.getkeys().length; j++){
@@ -84,9 +84,8 @@ function build(originWord)
 					break wordsearch;
 				}
 				
-				if(nextG.length > 1){
+				if(nextG.length > 1)
 					nextG = nextG[Math.floor(Math.random()*nextG.length)];
-				}
 				
 				//DEBUGGING
 				post("Next Origin: "+i);	
@@ -109,14 +108,13 @@ function endWord()
 	for(var i=0; i<genWord.length; i++){
 		formedWord = formedWord.concat(genWord[i]);
 		streamWord.push(genWord[i]);
-		outlet(0,genWord[i]);
 	}
 	
 	for(var i=0; i<genPhon.length; i++){
 		formedPhon = formedPhon.concat(genPhon[i]);
 		streamPhon.push(genPhon[i]);
-		outlet(1,genPhon[i]);
 	}
+	
 	outlet(0,streamWord);
 	outlet(1,streamPhon);
 	outlet(2,formedWord);
