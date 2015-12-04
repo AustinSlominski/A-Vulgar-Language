@@ -38,50 +38,113 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-18",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 18.666672, 491.0, 101.0, 22.0 ],
-					"style" : "",
-					"text" : "print formedphon"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-16",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 20.666672, 451.0, 101.0, 22.0 ],
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 20.666677, 450.5, 155.0, 22.0 ],
 					"style" : "",
-					"text" : "print formedword"
+					"text" : "y ie e e a ll l a g h e"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-12",
-					"linecount" : 15,
+					"id" : "obj-14",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 20.666677, 520.5, 179.333328, 22.0 ],
+					"style" : "",
+					"text" : "ī ī i e ā l l ô j h ē"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 116.0, 334.5, 52.0, 22.0 ],
+					"style" : "",
+					"text" : "compile"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontname" : "Helvetica Neue Bold",
+					"fontsize" : 18.0,
+					"id" : "obj-28",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 325.5, 213.0, 223.0, 208.0 ],
+					"patching_rect" : [ 346.666687, 486.0, 131.0, 28.0 ],
 					"style" : "",
-					"text" : "1. include rule where the second grapheme has to logically follow the first? \n\n2. I need a catch in the case of a two letter grapheme. The next character CAN'T be the same. Set a bool, and then a continue in the case of it running into the last character of the last grapheme?\n\n3. if the match that is found is the last in the word, AND that makes it only a one character word, then continue (MIGHT BE SOLVED BY ISSUE 1)"
+					"text" : "Pronunciation"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-15",
-					"maxclass" : "newobj",
+					"fontface" : 1,
+					"fontname" : "Helvetica Neue Bold",
+					"fontsize" : 18.0,
+					"id" : "obj-27",
+					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.666672, 409.0, 97.0, 22.0 ],
+					"patching_rect" : [ 346.666687, 416.0, 56.0, 28.0 ],
 					"style" : "",
-					"text" : "print graphemes"
+					"text" : "Word"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 20.0,
+					"id" : "obj-25",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 346.666687, 516.0, 174.0, 31.0 ],
+					"style" : "",
+					"text" : "īīieāllôjhē"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 20.0,
+					"id" : "obj-21",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 346.666687, 446.0, 150.0, 31.0 ],
+					"style" : "",
+					"text" : "yieeealllaghe"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 3,
+					"fontsize" : 18.0,
+					"id" : "obj-12",
+					"linecount" : 10,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 331.0, 61.0, 196.0, 208.0 ],
+					"style" : "",
+					"text" : "1. I need a catch in the case of a two letter grapheme. The next character CAN'T be the same. Set a bool, and then a continue in the case of it running into the last character of the last grapheme?"
 				}
 
 			}
@@ -96,7 +159,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 194.666672, 306.0, 50.0, 22.0 ],
+					"patching_rect" : [ 412.666687, 305.0, 51.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -108,7 +171,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 194.666672, 335.5, 107.0, 22.0 ],
+					"patching_rect" : [ 412.666687, 334.5, 108.0, 22.0 ],
 					"style" : "",
 					"text" : "setprop spread $1"
 				}
@@ -124,21 +187,6 @@
 					"patching_rect" : [ 194.666672, 284.0, 50.0, 20.0 ],
 					"style" : "",
 					"text" : "Spread"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontface" : 3,
-					"fontsize" : 14.0,
-					"id" : "obj-14",
-					"linecount" : 10,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 303.5, 465.5, 245.0, 163.0 ],
-					"style" : "",
-					"text" : "Input:\n    spread, \n    speed, \n    (phoneme_selection later)\n\nOutput:\n    Stream (grapheme), \n    Stream (phoneme), \n    built word (previous, grapheme),\n    built word (previous, phoneme)"
 				}
 
 			}
@@ -241,7 +289,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 20.666672, 370.0, 193.0, 22.0 ],
+					"patching_rect" : [ 20.666672, 370.0, 500.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "avl.js",
 						"parameter_enable" : 0
@@ -356,7 +404,16 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
+					"destination" : [ "obj-14", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-24", 0 ]
@@ -365,16 +422,17 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-16", 0 ],
+					"destination" : [ "obj-21", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 350.833344, 402.5, 487.166687, 402.5 ],
 					"source" : [ "obj-24", 2 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-18", 0 ],
+					"destination" : [ "obj-25", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-24", 3 ]
@@ -406,6 +464,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-24", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}

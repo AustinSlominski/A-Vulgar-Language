@@ -18,7 +18,7 @@ function select(originWord)
 		wInd = originWord;
 	}
 
-	tmpW = wB.get(wInd);
+	tmpW = wB.get(wInd); 
 	tmpG = tmpW.get(0);
 	
 	if(tmpG.length > 1){
@@ -107,17 +107,21 @@ function build(originWord)
 function endWord() 
 {
 	for(var i=0; i<genWord.length; i++){
-		outlet(0,genWord[i]);
 		formedWord = formedWord.concat(genWord[i]);
+		streamWord.push(genWord[i]);
+		outlet(0,genWord[i]);
 	}
 	
 	for(var i=0; i<genPhon.length; i++){
-		outlet(1,genPhon[i]);
 		formedPhon = formedPhon.concat(genPhon[i]);
+		streamPhon.push(genPhon[i]);
+		outlet(1,genPhon[i]);
 	}
-	
+	outlet(0,streamWord);
+	outlet(1,streamPhon);
 	outlet(2,formedWord);
 	outlet(3,formedPhon);
+	
 	//DEBUGGING
 	post("done");
 	post();
@@ -138,6 +142,8 @@ function bang()
 {
 	genWord = [];
 	genPhon = [];
+	streamWord = [];
+	streamPhon = [];
 	formedWord = "";
 	formedPhon = "";
 	
