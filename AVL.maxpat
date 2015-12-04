@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 551.0, 683.0 ],
+		"rect" : [ 34.0, 79.0, 561.0, 683.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,13 +38,15 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontsize" : 20.0,
 					"id" : "obj-41",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 48.000008, 497.5, 152.0, 22.0 ],
-					"style" : ""
+					"patching_rect" : [ 157.0, 439.0, 43.0, 31.0 ],
+					"style" : "",
+					"text" : "m"
 				}
 
 			}
@@ -101,7 +103,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 122.166687, 129.0, 103.0, 22.0 ],
 									"style" : "",
-									"text" : "t h i s t"
+									"text" : "d e n c a re"
 								}
 
 							}
@@ -216,7 +218,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 380.166687, 129.0, 103.0, 22.0 ],
 									"style" : "",
-									"text" : "t h i s t"
+									"text" : "d e ng k ä ə"
 								}
 
 							}
@@ -428,14 +430,15 @@
 			}
 , 			{
 				"box" : 				{
+					"fontsize" : 20.0,
 					"id" : "obj-16",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 20.666677, 465.5, 155.0, 22.0 ],
+					"patching_rect" : [ 20.666677, 439.0, 36.0, 31.0 ],
 					"style" : "",
-					"text" : "t h e c t"
+					"text" : "m"
 				}
 
 			}
@@ -461,7 +464,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 346.666687, 486.0, 131.0, 28.0 ],
+					"patching_rect" : [ 294.666687, 479.0, 131.0, 28.0 ],
 					"style" : "",
 					"text" : "Pronunciation"
 				}
@@ -476,7 +479,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 346.666687, 416.0, 56.0, 28.0 ],
+					"patching_rect" : [ 294.666687, 409.0, 56.0, 28.0 ],
 					"style" : "",
 					"text" : "Word"
 				}
@@ -490,9 +493,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 346.666687, 516.0, 174.0, 31.0 ],
+					"patching_rect" : [ 294.666687, 509.0, 225.999985, 31.0 ],
 					"style" : "",
-					"text" : "thist"
+					"text" : "dengkäə"
 				}
 
 			}
@@ -504,9 +507,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 346.666687, 446.0, 150.0, 31.0 ],
+					"patching_rect" : [ 294.666687, 439.0, 187.0, 31.0 ],
 					"style" : "",
-					"text" : "thect"
+					"text" : "dencare"
 				}
 
 			}
@@ -784,7 +787,7 @@
 					"destination" : [ "obj-21", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 350.833344, 402.5, 487.166687, 402.5 ],
+					"midpoints" : [ 350.833344, 402.5, 472.166687, 402.5 ],
 					"source" : [ "obj-24", 2 ]
 				}
 

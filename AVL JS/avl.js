@@ -77,7 +77,7 @@ function build(originWord)
 				tmpG = tmpG[Math.floor(Math.random()*tmpG.length)];
 
 			if(tmpG === genWord[genWord.length-1]){
-				nextG = tmpW.get(j+1);
+				nextG = tmpW.get(j+tmpG.length);
 				
 				if(nextG == null){
 					endWord();
