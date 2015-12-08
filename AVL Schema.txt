@@ -1,0 +1,45 @@
+CREATE TABLE languages
+(
+	id int primary key NOT NULL,
+	name nvarchar(30) NOT NULL,
+	trans_name nvarchar(30),
+	countries_of_origin TEXT,
+);
+
+CREATE TABLE sources
+(
+	id int primary key NOT NULL,
+	language_id int NOT NULL,
+	title nvarchar(100) NOT NULL,
+	author nvarchar(100) NOT NULL,
+	subject TEXT NOT NULL,
+	year nvarchar(10),
+	FOREIGN KEY (language_id) REFERENCES languages(id)
+);
+
+CREATE TABLE words
+(
+	id int primary key NOT NULL,
+	source_id int NOT NULL,
+	position int NOT NULL,
+	word nvarchar(50) NOT NULL,
+	FOREIGN KEY (source_id) REFERENCES sources(id)
+);
+
+CREATE TABLE graphemes
+( 
+	id int primary key NOT NULL, 
+	word_id int NOT NULL, 
+	position int NOT NULL, 
+	grapheme nvarchar(20) NOT NULL, 
+	FOREIGN KEY (word_id) REFERENCES words(id) 
+);
+
+CREATE TABLE graphPhon
+(
+	id int primary key NOT NULL,
+	word_id int NOT NULL,
+	position int NOT NULL,
+	phoneme nvarchar(10) NOT NULL,
+);
+
